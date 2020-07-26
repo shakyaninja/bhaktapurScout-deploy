@@ -244,7 +244,7 @@ body {
             .hero-info {
                 height: 100vh;
                 width: 100%;
-                color: $lightfont;
+                color: $secondary;
                 padding: 20%;
                 position: absolute;
                 top: 0%;
@@ -1886,7 +1886,7 @@ body {
     #event {
         #top-banner-event {
             min-height: 75vh;
-            background: url("/views/assets/images/boys-1822557_1920.jpg") no-repeat fixed;
+            background: url("../images/boys-1822557_1920.jpg") no-repeat fixed;
             background-size: center;
             color: $secondary;
 
@@ -2201,7 +2201,7 @@ body {
 
         #top-banner-about {
             min-height: 40vh;
-            background: url("/views/assets/images/adventure-1807495_19201.jpg") no-repeat fixed;
+            background: url("../images/adventure-1807495_19201.jpg") no-repeat fixed;
             background-size: center;
 
             .container-fluid {

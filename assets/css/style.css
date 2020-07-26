@@ -178,7 +178,7 @@ body #index #hero .banner-img {
 body #index #hero .hero-info {
   height: 100vh;
   width: 100%;
-  color: #555555;
+  color: #e1f0f7;
   padding: 20%;
   position: absolute;
   top: 0%;
@@ -1372,7 +1372,7 @@ body #quick-links #links .container .row .fond .carreaux_presentation_light:hove
 }
 body #event #top-banner-event {
   min-height: 75vh;
-  background: url("/views/assets/images/boys-1822557_1920.jpg") no-repeat fixed;
+  background: url("../images/boys-1822557_1920.jpg") no-repeat fixed;
   background-size: center;
   color: #e1f0f7;
 }
@@ -1635,7 +1635,7 @@ body #about {
 }
 body #about #top-banner-about {
   min-height: 40vh;
-  background: url("/views/assets/images/adventure-1807495_19201.jpg") no-repeat fixed;
+  background: url("../images/adventure-1807495_19201.jpg") no-repeat fixed;
   background-size: center;
 }
 body #about #top-banner-about .container-fluid {
