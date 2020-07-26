@@ -13,56 +13,63 @@
 </head>
 
 <body>
-    <header>
-        <nav class="container-fluid nav fixed-top p-3">
-            <div class="brand">
-                <span>SCOUTS</span>
+  <header>
+    <nav class="container-fluid nav fixed-top p-3">
+        <div class="brand">
+            <span>SCOUTS</span>
+        </div>
+        <div class="menu" onclick="openNav()">
+            <i class="fa fa-bars"></i>
+        </div>
+        <div id="curtain-nav" class="overlay animate__animated animate__slideInTop">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a href="index.html">
+                    <div class="flex">
+                        <div class="line-dec"></div>
+                        <span>Home</span>
+                        <div class="line-dec"></div>
+                    </div>
+                </a>
+                <a href="event.html">
+                    <div class="flex">
+                        <div class="line-dec"></div>
+                        <span>Events</span>
+                        <div class="line-dec"></div>
+                    </div>
+                </a>
+                <a href="about.html">
+                    <div class="flex">
+                        <div class="line-dec"></div>
+                        <span>About Us</span>
+                        <div class="line-dec"></div>
+                    </div>
+                </a>
+                <a href="registration.html">
+                    <div class="flex">
+                        <div class="line-dec"></div>
+                        <span>Registration</span>
+                        <div class="line-dec"></div>
+                    </div>
+                </a>
+                <a href="resource.html">
+                  <div class="flex">
+                      <div class="line-dec"></div>
+                      <span>Resources</span>
+                      <div class="line-dec"></div>
+                  </div>
+              </a>
+                <a href="contact.html">
+                    <div class="flex">
+                        <div class="line-dec"></div>
+                        <span>Contact Us</span>
+                        <div class="line-dec"></div>
+                    </div>
+                </a>
             </div>
-            <div class="menu" onclick="openNav()">
-                <i class="fa fa-bars"></i>
-            </div>
-            <div id="curtain-nav" class="overlay animate__animated animate__slideInTop">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <div class="overlay-content">
-                    <a href="index.html">
-                        <div class="flex">
-                            <div class="line-dec"></div>
-                            <span>Home</span>
-                            <div class="line-dec"></div>
-                        </div>
-                    </a>
-                    <a href="event.html">
-                        <div class="flex">
-                            <div class="line-dec"></div>
-                            <span>Events</span>
-                            <div class="line-dec"></div>
-                        </div>
-                    </a>
-                    <a href="about.html">
-                        <div class="flex">
-                            <div class="line-dec"></div>
-                            <span>About Us</span>
-                            <div class="line-dec"></div>
-                        </div>
-                    </a>
-                    <a href="registration.html">
-                        <div class="flex">
-                            <div class="line-dec"></div>
-                            <span>Registration</span>
-                            <div class="line-dec"></div>
-                        </div>
-                    </a>
-                    <a href="contact.html">
-                        <div class="flex">
-                            <div class="line-dec"></div>
-                            <span>Contact Us</span>
-                            <div class="line-dec"></div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </nav>
-      </header>
+        </div>
+    </nav>
+  </header>
 
   
   <main id="res_detail">
