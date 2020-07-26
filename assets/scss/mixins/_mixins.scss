@@ -1,0 +1,18 @@
+@mixin margin-new($ml,$mt,$mr,$mb){
+    margin-top: $mt;
+    margin-bottom: $mb;
+    margin-right: $mr;
+    margin-left: $ml;
+}
+
+@mixin padding-new($pl,$pt,$pr,$pb){
+    padding-top: $pt;
+    padding-bottom: $pb;
+    padding-right: $pr;
+    padding-left: $pl;
+}
+
+@mixin image-size($width,$height){
+    width: $width;
+    height: $height;
+}

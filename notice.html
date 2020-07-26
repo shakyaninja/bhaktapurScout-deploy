@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BKT Scout | Notice</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/fonts/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="container-fluid nav fixed-top p-3">
+      <div class="brand">
+        <span>SCOUTS</span>
+      </div>
+      <div class="menu" onclick="openNav()">
+        <i class="fa fa-bars"></i>
+      </div>
+      <div id="curtain-nav" class="overlay animate__animated animate__slideInTop">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+          <a href="index.html">
+            <div class="flex">
+              <div class="line-dec"></div>
+              <span>Home</span>
+              <div class="line-dec"></div>
+            </div>
+          </a>
+          <a href="event.html">
+            <div class="flex">
+              <div class="line-dec"></div>
+              <span>Events</span>
+              <div class="line-dec"></div>
+            </div>
+          </a>
+          <a href="about.html">
+            <div class="flex">
+              <div class="line-dec"></div>
+              <span>About Us</span>
+              <div class="line-dec"></div>
+            </div>
+          </a>
+          <a href="registration.html">
+            <div class="flex">
+              <div class="line-dec"></div>
+              <span>Registration</span>
+              <div class="line-dec"></div>
+            </div>
+          </a>
+          <a href="contact.html">
+            <div class="flex">
+              <div class="line-dec"></div>
+              <span>Contact Us</span>
+              <div class="line-dec"></div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="notice">
+    <section id="top-banner-notice">
+      <div class="container-fluid">
+        <h1 class="text-center mx-5">Notice</h1>
+      </div>
+    </section>
+    <section id="notice-list">
+      <div class="category-buttons mt-5">
+        <div class="tablink btn" onclick="opencategory('all', this, 'maroon')"  id="defaultOpen" >
+          <svg width="277" height="62">
+            <defs>
+              <linearGradient id="grad1">
+                <stop offset="0%" stop-color="#009a01" />
+                <stop offset="100%" stop-color="#0A5D00" />
+              </linearGradient>
+            </defs>
+            <rect x="5" y="5" rx="25" fill="none" stroke="url(#grad1)" width="266" height="50"></rect>
+          </svg>
+          <span>All</span>
+        </div>
+        <div class="tablink btn" onclick="opencategory('scouts', this, 'green')">
+          <svg width="277" height="62">
+            <defs>
+              <linearGradient id="grad1">
+                <stop offset="0%" stop-color="#009a01" />
+                <stop offset="100%" stop-color="#0A5D00" />
+              </linearGradient>
+            </defs>
+            <rect x="5" y="5" rx="25" fill="none" stroke="url(#grad1)" width="266" height="50"></rect>
+          </svg>
+          <span>Scouts</span>
+        </div>
+        <div class="tablink btn" onclick="opencategory('rover', this, 'dodgerblue')">
+          <svg width="277" height="62">
+            <defs>
+              <linearGradient id="grad1">
+                <stop offset="0%" stop-color="#009a01" />
+                <stop offset="100%" stop-color="#0A5D00" />
+              </linearGradient>
+            </defs>
+            <rect x="5" y="5" rx="25" fill="none" stroke="url(#grad1)" width="266" height="50"></rect>
+          </svg>
+          <span>Rover /Ranger</span>
+        </div>
+        <div class="tablink btn" onclick="opencategory('master', this, 'orange')">
+          <svg width="277" height="62">
+            <defs>
+              <linearGradient id="grad1">
+                <stop offset="0%" stop-color="#009a01" />
+                <stop offset="100%" stop-color="#0A5D00" />
+              </linearGradient>
+            </defs>
+            <rect x="5" y="5" rx="25" fill="none" stroke="url(#grad1)" width="266" height="50"></rect>
+          </svg>
+          <span>Master</span>
+        </div>
+        <div class="tablink btn" onclick="opencategory('cubs', this, 'orange')">
+          <svg width="277" height="62">
+            <defs>
+              <linearGradient id="grad1">
+                <stop offset="0%" stop-color="#009a01" />
+                <stop offset="100%" stop-color="#0A5D00" />
+              </linearGradient>
+            </defs>
+            <rect x="5" y="5" rx="25" fill="none" stroke="url(#grad1)" width="266" height="50"></rect>
+          </svg>
+          <span>Cubs /Brownie</span>
+        </div>
+        <!-- <button class="tablink btn" onclick="opencategory('cat-1', this, 'maroon')"
+          id="defaultOpen">Administration</button>
+        <button class="tablink btn" onclick="opencategory('cat-2', this, 'green')">Events</button>
+        <button class="tablink btn" onclick="opencategory('cat-3', this, 'dodgerblue')">Jamborre</button>
+        <button class="tablink btn" onclick="opencategory('cat-4', this, 'orange')">Trainings</button> -->
+      </div>
+      <div id="all" class="tabcontent animate__animated animate__slideInRight">
+        <div class="container-fluid">
+          <section id="recent-notice" class="flip-notice">
+            <div class="container-fluid">
+              <h2 class="text-center mb-5">Recent Notice</h2>
+              <div class="row my-4">
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front all">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front all">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front all">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front all">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="old-notice" class="flip-notice">
+            <div class="container-fluid">
+              <h2 class="text-center my-5">Old Notice</h2>
+              <div class="row my-4">
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front all">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front all">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front all">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front all">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row my-4">
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front all">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front all">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front all">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front all">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pages">
+                <a href="#">
+                  <div class="page active">
+                    <div class="inner-box"><span>1</span></div>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="page">
+                    <div class="inner-box"><span>2</span></div>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="page">
+                    <div class="inner-box"><span>3</span></div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <div id="scouts" class="tabcontent animate__animated animate__slideInRight">
+        <div class="container-fluid">
+          <section id="recent-notice" class="flip-notice">
+            <div class="container-fluid">
+              <h2 class="text-center mb-5">Recent Notice</h2>
+              <div class="row my-4">
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front scout">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front scout">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front scout">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front scout">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="old-notice" class="flip-notice">
+            <div class="container-fluid">
+              <h2 class="text-center my-5">Old Notice</h2>
+              <div class="row my-4">
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front scout">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front scout">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front scout">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front scout">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row my-4">
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front scout">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front scout">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front scout">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front scout">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pages">
+                <a href="#">
+                  <div class="page active">
+                    <div class="inner-box"><span>1</span></div>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="page">
+                    <div class="inner-box"><span>2</span></div>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="page">
+                    <div class="inner-box"><span>3</span></div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <div id="rover" class="tabcontent animate__animated animate__slideInRight">
+        <div class="container-fluid">
+          <section id="recent-notice" class="flip-notice">
+            <div class="container-fluid">
+              <h2 class="text-center mb-5">Recent Notice</h2>
+              <div class="row my-4">
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front rover">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front rover">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front rover">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front rover">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="old-notice" class="flip-notice">
+            <div class="container-fluid">
+              <h2 class="text-center my-5">Old Notice</h2>
+              <div class="row my-4">
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front rover">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front rover">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front rover">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front rover">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row my-4">
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front rover">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front rover">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front rover">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front rover">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pages">
+                <a href="#">
+                  <div class="page active">
+                    <div class="inner-box"><span>1</span></div>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="page">
+                    <div class="inner-box"><span>2</span></div>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="page">
+                    <div class="inner-box"><span>3</span></div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <div id="master" class="tabcontent animate__animated animate__slideInRight">
+        <div class="container-fluid">
+          <section id="recent-notice" class="flip-notice">
+            <div class="container-fluid">
+              <h2 class="text-center mb-5">Recent Notice</h2>
+              <div class="row my-4">
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front master">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front master">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front master">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front master">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="old-notice" class="flip-notice">
+            <div class="container-fluid">
+              <h2 class="text-center my-5">Old Notice</h2>
+              <div class="row my-4">
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front master">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front master">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front master">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front master">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row my-4">
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front master">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front master">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front master">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front master">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pages">
+                <a href="#">
+                  <div class="page active">
+                    <div class="inner-box"><span>1</span></div>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="page">
+                    <div class="inner-box"><span>2</span></div>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="page">
+                    <div class="inner-box"><span>3</span></div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <div id="cubs" class="tabcontent animate__animated animate__slideInRight">
+        <div class="container-fluid">
+          <section id="recent-notice" class="flip-notice">
+            <div class="container-fluid">
+              <h2 class="text-center mb-5">Recent Notice</h2>
+              <div class="row my-4">
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front cub">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front cub">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front cub">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front cub">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="old-notice" class="flip-notice">
+            <div class="container-fluid">
+              <h2 class="text-center my-5">Old Notice</h2>
+              <div class="row my-4">
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front cub">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front cub">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front cub">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front cub">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row my-4">
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front cub">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front cub">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front cub">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-3 col-xs-12 center-block">
+                  <div class="flip-card" onclick="fullnotice(this)" data-src="./assets/images/notices/notice-sample.jpg">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front cub">
+                        <h1 class="my-2">Nepal Scout</h1>
+                        <p>Leider ist der Eintrag nur auf Amerikanisches Englisch verfügbar.</p>
+                        <p><i class="fa fa-calendar-o"></i> June 19, 2020 </p>
+                      </div>
+                      <div class="flip-card-back">
+                        <img src="./assets/images/notices/notice-sample.jpg" alt="Notice" style="width:300px;height:300px;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pages">
+                <a href="#">
+                  <div class="page active">
+                    <div class="inner-box"><span>1</span></div>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="page">
+                    <div class="inner-box"><span>2</span></div>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="page">
+                    <div class="inner-box"><span>3</span></div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      
+    </section>
+
+  </main>
+
+  <footer>
+    <!--footer-top-->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-3 col-sm-6">
+          <div class="container">
+            <a href="quick-links.html">
+              <h4>Quick Links</h4>
+            </a>
+            <div class="footer-menu">
+              <ul>
+                <li><a href="registration.html">Registration</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="notice.html">Notice</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="organizations.html">Associated Groups</a></li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="https://nepalscouts.org/">Nepal Scout Organization</a>
+                </li>
+                <li>
+                  <a href="https://www.scout.org/">World Scout Organization</a>
+                </li>
+                <li><a href="https://www.wagggs.org/en/">WAGGGS</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="container">
+            <a href="javascript:;">
+              <h4>Working Hours</h4>
+            </a>
+            <div class="work-hours">
+              <table>
+                <tr>
+                  <td class="day">Sunday</td>
+                  <td class="time">10:00-17:00</td>
+                </tr>
+                <tr>
+                  <td class="day">Monday</td>
+                  <td class="time">10:00-17:00</td>
+                </tr>
+                <tr>
+                  <td class="day">Tuesday</td>
+                  <td class="time">10:00-17:00</td>
+                </tr>
+                <tr>
+                  <td class="day">Wednesday</td>
+                  <td class="time">10:00-17:00</td>
+                </tr>
+                <tr>
+                  <td class="day">Thursday</td>
+                  <td class="time">10:00-17:00</td>
+                </tr>
+                <tr>
+                  <td class="day">Friday</td>
+                  <td class="time">10:00-13:00</td>
+                </tr>
+                <tr>
+                  <td class="day">Saturday</td>
+                  <td class="time">Closed</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="container">
+            <a href="contact.html">
+              <h4>Contact Info</h4>
+            </a>
+            <div class="contact-info">
+              <ul>
+                <li>
+                  <i class="fa fa-home"></i>Bhaktapur Scout, Lyaku,
+                  Bhaktapur
+                </li>
+                <li><i class="fa fa-phone"></i></li>
+                <li><i class="fa fa-mobile"></i>+977</li>
+                <li><i class="fa fa-envelope"></i>info@bktscouts.com</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <!-- map integration -->
+          <div class="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d441.6805968389092!2d85.42831021260967!3d27.672644964807326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1aafebda0fd9%3A0x6585390d56a2be6a!2sNepal%20Scout%20Office!5e0!3m2!1sen!2snp!4v1594367858921!5m2!1sen!2snp"
+              width="350" height="250" frameborder="0" style="border: 1; border-radius: 5;" allowfullscreen="true"
+              aria-hidden="false" tabindex="0"></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright container-fluid">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <p>Designed and Developed By:</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--footer copyright section-->
+  </footer>
+
+  <div class="modal animate__animated animate__fadeIn " id="notice-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+
+          <img src="" id="full-notice" alt="">
+
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="./assets/js/bootstrap.min.js"></script>
+  <script src="./assets/js/main.js"></script>
+  <script>
+    function fullnotice(element) {
+      var url = $(element).data('src');
+      var img = document.getElementById('full-notice');
+      img.setAttribute("src", url);
+      $('#notice-modal').modal();
+    }     
+    function fullscreen(element) {
+      var url = $(element).data('src');
+      var img = document.getElementById('full-img');
+      img.setAttribute("src", url);
+      $('#gallery-full').modal();
+    }
+
+    function opencategory(categoryName, elmnt, color) {
+      // Hide all elements with class="tabcontent" by default */
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+
+      // Remove the background color of all tablinks/buttons
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+      }
+
+      // Show the specific tab content
+      document.getElementById(categoryName).style.display = "block";
+
+      // Add the specific color to the button used to open the tab content
+      // elmnt.style.backgroundColor = color;
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+
+    window.onscroll = function () { myFunction() };
+
+  </script>
+</body>
+
+</html>

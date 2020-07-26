@@ -1,0 +1,990 @@
+@media only screen and (max-device-width : 480px) {
+
+    header {
+        nav{
+            .brand{
+                font-size: 12px;
+                &:hover{
+                    font-size: 16px;
+                }
+            }
+            .menu{
+                font-size: 12px;
+                &:hover{
+                    font-size: 16px;
+                }
+            }
+            .overlay {
+                a {
+                    font-size: 20px
+                }
+                .closebtn {
+                    font-size: 40px;
+                    top: 15px;
+                    right: 35px;
+                }
+            }
+        }
+    }
+    // for mobile devices
+    #index {
+
+        #hero {
+            .hero-info {
+                h1 {
+                    font-size: $herofont-sm;
+                }
+
+                span {
+                    font-size: $infofont-sm;
+                }
+
+                .play-btn {
+                    height: 20px;
+                    width: 20px;
+
+                    i {
+                        font-size: 8px;
+                    }
+                }
+
+
+            }
+        }
+
+        #welcome {
+            min-height: 50vh;
+            .container-fluid {
+                .row {
+                    margin: 0px;
+                    padding: 5%;
+                    #aboutus-img {
+                        border-radius: 5px;
+                        width: 250px;
+                    }
+
+                    #welcome-txt {
+                        margin-top: -15%;
+                        margin-left: 11%;
+                        border-radius: 5px;
+                        width: 200px;
+                        font-size: 6px;
+                        overflow: hidden;
+                        padding: 10%;
+                        h2 {
+                            font-size: 10px;
+                        }
+
+                    }
+                }
+            }
+        }
+
+        
+        #testimonial {
+            min-height: 50vh;
+            h2{
+                font-size: $testimonial-title-sm;
+            }
+            .carousel {
+                .carousel-inner {
+                    .avatar {
+                        padding: 20%;
+                        margin-right: 0;
+                        margin-bottom: 20%;
+                        .image-avatar {
+                            border-radius: 50%;
+                            height: 100px;
+                            width: 100px;
+                        }
+
+                        h3 {
+                            font-size: $testimonial-name-size-sm;
+                            font-style: bold;
+                        }
+
+                        span {
+                            font-size: 7px;
+                        }
+                    }
+                }
+            }
+
+            .testimonial-txt {
+                padding: 20%;
+                margin-left: -30%;
+                margin-top: 10%;
+                height: 50%;
+                border-radius: 15px;
+                font-size: $testimonial-name-size-sm;
+            }
+        }
+
+        #social-links {
+            min-height: 30vh;
+            .container {
+                ul {
+                    margin: 10% 0;
+                    li {
+                        width: 30px;
+                        height: 30px;
+                        a {
+                            text-decoration: none;
+                            span {
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+    #notice{
+        #notice-list{
+            .category-buttons {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-evenly;
+
+
+            }
+            .tabcontent{
+                .container-fluid{
+                    .flip-notice {
+                        padding: 3% 0;
+                        .container-fluid {
+                            h2 {
+                                font-family: 'Kanit', sans-serif;
+                            }
+                            .row {
+                                .flip-card {
+                                    @include margin-new(20px, 10px, 0, 10px);
+                                }
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #gallery {
+        min-height: 100vh;
+        #top-banner-gallery {
+            min-height: 50vh;
+
+            .container-fluid {
+                height: 50vh;
+                background-color: rgba(0, 0, 0, 0.5);
+
+                h1 {
+                    font-family: 'Kanit', sans-serif;
+                    font-weight: 500;
+                    color: $secondary;
+                }
+            }
+        }
+
+        #gallery-images {
+            .rows {
+                padding: 0 4px;
+
+                .column {
+                    flex: 100%;
+                    padding: 0 4px;
+
+                    .pic {
+                        margin-top: 8px;
+
+                        img {
+                            margin: 0;
+                            padding: 0;
+                        }
+
+                        .overlay {
+                            .left-top {
+                                position: absolute;
+                                margin: 10%;
+                                z-index: 1010;
+                                width: 50px;
+                                height: 50px;
+                                border-top: 2px solid white;
+                                border-left: 2px solid white;
+                                background-color: transparent;
+                            }
+
+                            .left-bottom {
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                margin: 10%;
+                                z-index: 1010;
+                                width: 50px;
+                                height: 50px;
+                                border-bottom: 2px solid white;
+                                border-left: 2px solid white;
+                                background-color: transparent;
+                            }
+
+                            .right-bottom {
+                                position: absolute;
+                                bottom: 0;
+                                right: 0;
+                                margin: 10%;
+                                z-index: 1010;
+                                width: 50px;
+                                height: 50px;
+                                border-bottom: 2px solid white;
+                                border-right: 2px solid white;
+                                background-color: transparent;
+                            }
+
+                            .right-top {
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                margin: 10%;
+                                z-index: 1010;
+                                width: 50px;
+                                height: 50px;
+                                border-top: 2px solid white;
+                                border-right: 2px solid white;
+                                background-color: transparent;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        #category-gallery {
+            .container-fluid {
+
+                /* Style the tab buttons */
+                .category-buttons {
+                    .tablink {
+                        margin: 20px 10px;
+                        font-size: 12px;
+                    }
+                }
+
+                .tabcontent {
+                    padding: 50px;
+                    .container-fluid {
+                        .rows {
+                            padding: 0 4px;
+                            .column {
+                                flex: 100%;
+                                padding: 0 4px;
+
+                                .pic {
+                                    margin-top: 8px;
+                                    img {
+                                        margin: 0;
+                                        padding: 0;
+                                    }
+
+                                    .overlay {
+                                        .left-top {
+                                            width: 20px;
+                                            height: 20px;
+                                        }
+
+                                        .left-bottom {
+                                            z-index: 1010;
+                                            width: 20px;
+                                            height: 20px;
+                                        }
+
+                                        .right-bottom {
+                                            z-index: 1010;
+                                            width: 20px;
+                                            height: 20px;
+                                        }
+
+                                        .right-top {
+                                            z-index: 1010;
+                                            width: 20px;
+                                            height: 20px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+@media only screen and (min-width : 481px) and (max-width : 1024px) {
+
+    header {
+        nav{
+            .brand{
+                font-size: 14px;
+                &:hover{
+                    font-size: 18px;
+                }
+            }
+            .menu{
+                font-size: 14px;
+                &:hover{
+                    font-size: 18px;
+                }
+            }
+            .overlay {
+                a {
+                    font-size: 20px
+                }
+                .closebtn {
+                    font-size: 40px;
+                    top: 15px;
+                    right: 35px;
+                }
+            }
+        }
+    }
+    // for medium res. devices
+    #index {
+        #hero {
+            .hero-info {
+                h1 {
+                    font-size: $herofont-md;
+                }
+
+                span {
+                    font-size: $infofont-md;
+                }
+
+                .play-btn {
+                    height: 40px;
+                    width: 40px;
+
+                    i {
+                        font-size: 18px;
+                    }
+                }
+
+
+            }
+        }
+
+        #welcome {
+            min-height: 80vh;
+
+            .container-fluid {
+                .row {
+                    #aboutus-img {
+                        margin: 10%;
+                        margin-right: 50%;
+                        width: 100%;
+                        position: absolute;
+                        left: 10%;
+
+                        border-radius: 10px;
+                    }
+
+                    #welcome-txt {
+                        padding-top: 5%;
+                        padding-left: 5%;
+                        padding-right: 5%;
+                        padding-bottom: 5%;
+                        position: absolute;
+                        top: 30%;
+                        margin-left: 5%;
+                        margin-top: 15%;
+
+                        border-radius: 10px;
+                        width: 300px;
+                        height: 225px;
+                        font-size: 12px;
+
+                        h2 {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+
+        #testimonial {
+            min-height: 50vh;
+            h2{
+                font-size: $testimonial-title-md;
+            }
+            .carousel {
+                .carousel-inner {
+                    .avatar {
+                        padding: 20%;
+                        margin-right: 0;
+                        margin-bottom: 20%;
+                        .image-avatar {
+                            border-radius: 50%;
+                            height: 150px;
+                            width: 150px;
+                        }
+
+                        h3 {
+                            font-size: $testimonial-name-size-md;
+                            font-style: bold;
+                        }
+
+                        span {
+                            font-size: 10px;
+                        }
+                    }
+                }
+            }
+
+            .testimonial-txt {
+                padding: 20%;
+                margin-left: -30%;
+                margin-top: 10%;
+                height: 50%;
+                border-radius: 53px;
+                font-size: $testimonial-name-size-md;
+
+            }
+        }
+
+        #social-links {
+            min-height: 50vh;
+            .container {
+                ul {
+                    margin: 5% 0;
+                    li {
+                        width: 50px;
+                        height: 50px;
+                        a {
+                            text-decoration: none;
+
+                            span {
+                                font-size: 30px;
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #notice{
+        #notice-list{
+            .category-buttons {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-evenly;
+
+            }
+            .tabcontent{
+                .container-fluid{
+                    .flip-notice {
+                        padding: 3% 0;
+                        .container-fluid {
+                            h2 {
+                                font-family: 'Kanit', sans-serif;
+                            }
+                            .row {
+                                .flip-card {
+                                    @include margin-new(20px, 10px, 0, 10px);
+                                }
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #gallery {
+        min-height: 100vh;
+        #top-banner-gallery {
+            min-height: 50vh;
+
+            .container-fluid {
+                height: 50vh;
+                background-color: rgba(0, 0, 0, 0.5);
+
+                h1 {
+                    font-family: 'Kanit', sans-serif;
+                    font-weight: 500;
+                    color: $secondary;
+                }
+            }
+        }
+
+        #gallery-images {
+            .rows {
+                padding: 0 4px;
+
+                .column {
+                    flex: 50%;
+                    padding: 0 4px;
+
+                    .pic {
+                        margin-top: 8px;
+
+                        img {
+                            margin: 0;
+                            padding: 0;
+                        }
+
+                        .overlay {
+                            .left-top {
+                                position: absolute;
+                                margin: 10%;
+                                z-index: 1010;
+                                width: 50px;
+                                height: 50px;
+                                border-top: 2px solid white;
+                                border-left: 2px solid white;
+                                background-color: transparent;
+                            }
+
+                            .left-bottom {
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                margin: 10%;
+                                z-index: 1010;
+                                width: 50px;
+                                height: 50px;
+                                border-bottom: 2px solid white;
+                                border-left: 2px solid white;
+                                background-color: transparent;
+                            }
+
+                            .right-bottom {
+                                position: absolute;
+                                bottom: 0;
+                                right: 0;
+                                margin: 10%;
+                                z-index: 1010;
+                                width: 50px;
+                                height: 50px;
+                                border-bottom: 2px solid white;
+                                border-right: 2px solid white;
+                                background-color: transparent;
+                            }
+
+                            .right-top {
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                margin: 10%;
+                                z-index: 1010;
+                                width: 50px;
+                                height: 50px;
+                                border-top: 2px solid white;
+                                border-right: 2px solid white;
+                                background-color: transparent;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        #category-gallery {
+            .container-fluid {
+
+                /* Style the tab buttons */
+                .category-buttons {
+                    .tablink {
+                        margin: 20px 10px;
+                        font-size: 17px;
+                    }
+                }
+
+                .tabcontent {
+                    padding: 50px;
+                    .container-fluid {
+                        .rows {
+                            padding: 0 4px;
+                            .column {
+                                flex: 50%;
+                                padding: 0 4px;
+
+                                .pic {
+                                    margin-top: 8px;
+                                    img {
+                                        margin: 0;
+                                        padding: 0;
+                                    }
+
+                                    .overlay {
+                                        .left-top {
+                                            width: 50px;
+                                            height: 50px;
+                                        }
+
+                                        .left-bottom {
+                                            z-index: 1010;
+                                            width: 50px;
+                                            height: 50px;
+                                        }
+
+                                        .right-bottom {
+                                            z-index: 1010;
+                                            width: 50px;
+                                            height: 50px;
+                                        }
+
+                                        .right-top {
+                                            z-index: 1010;
+                                            width: 50px;
+                                            height: 50px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width : 1025px) and (max-width : 1920px) {
+
+    header {
+        nav{
+            .brand{
+                font-size: 20px;
+                &:hover{
+                    font-size: 32px;
+                }
+            }
+            .menu{
+                font-size: 20px;
+                &:hover{
+                    font-size: 32px;
+                }
+            }
+            .overlay {
+                a {
+                    font-size: 20px
+                }
+                .closebtn {
+                    font-size: 40px;
+                    top: 15px;
+                    right: 35px;
+                }
+            }
+        }
+    }
+    // for high res. devices
+    #index {
+        #hero {
+            .hero-info {
+                h1 {
+                    font-size: $herofont-lg;
+                }
+
+                span {
+                    font-size: $infofont-lg;
+                }
+
+                .play-btn {
+                    height: 80px;
+                    width: 80px;
+
+                    i {
+                        font-size: 28px;
+                    }
+                }
+
+
+            }
+        }
+
+        #welcome {
+            min-height: 100vh;
+
+            .container-fluid {
+                .row {
+                    #aboutus-img {
+                        margin: 10%;
+                        margin-right: 50%;
+                        width: 100%;
+                        position: absolute;
+                        left: 10%;
+
+                        border-radius: 20px;
+                    }
+
+                    #welcome-txt {
+                        padding-top: 10%;
+                        padding-left: 5%;
+                        padding-right: 5%;
+                        padding-bottom: 5%;
+                        position: absolute;
+                        top: 30%;
+                        margin-left: 5%;
+                        margin-top: 15%;
+
+                        border-radius: 20px;
+                        width: 600px;
+                        height: 400px;
+                        font-size: 18px;
+
+                        h2 {
+                            font-size: 32px;
+                        }
+                    }
+                }
+            }
+        }
+
+        #testimonial {
+            min-height: 50vh;
+            h2{
+                font-size: $testimonial-title-lg;
+            }
+            .carousel {
+                .carousel-inner {
+                    .avatar {
+                        padding: 20%;
+                        margin-right: 0;
+                        margin-bottom: 20%;
+                        .image-avatar {
+                            border-radius: 50%;
+                   
+                        }
+
+                        h3 {
+                            font-size: $testimonial-name-size-lg;
+                            font-style: bold;
+                        }
+
+                        span {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+
+            .testimonial-txt {
+                padding: 20%;
+                margin-left: -30%;
+                margin-top: 10%;
+                height: 50%;
+                border-radius: 53px;
+                font-size: $testimonial-name-size-lg;
+            }
+        }
+
+
+        #social-links {
+            min-height: 70vh;
+
+            h2 {
+                font-family: 'Kanit', sans-serif;
+            }
+
+            .container {
+                ul {
+                    margin: 10% 0;
+                    li {
+                        width: 100px;
+                        height: 100px;
+                        a {
+                            text-decoration: none;
+
+                            span {
+                                font-size: 50px;
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #gallery {
+        min-height: 100vh;
+        #top-banner-gallery {
+            min-height: 50vh;
+
+            .container-fluid {
+                height: 50vh;
+                background-color: rgba(0, 0, 0, 0.5);
+
+                h1 {
+                    font-family: 'Kanit', sans-serif;
+                    font-weight: 500;
+                    color: $secondary;
+                }
+            }
+        }
+
+        #gallery-images {
+            .rows {
+                padding: 0 4px;
+
+                .column {
+                    flex: 33.33%;
+                    padding: 0 4px;
+
+                    .pic {
+                        margin-top: 8px;
+
+                        img {
+                            margin: 0;
+                            padding: 0;
+                        }
+
+                        .overlay {
+                            .left-top {
+                                position: absolute;
+                                margin: 10%;
+                                z-index: 1010;
+                                width: 50px;
+                                height: 50px;
+                                border-top: 2px solid white;
+                                border-left: 2px solid white;
+                                background-color: transparent;
+                            }
+
+                            .left-bottom {
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                margin: 10%;
+                                z-index: 1010;
+                                width: 50px;
+                                height: 50px;
+                                border-bottom: 2px solid white;
+                                border-left: 2px solid white;
+                                background-color: transparent;
+                            }
+
+                            .right-bottom {
+                                position: absolute;
+                                bottom: 0;
+                                right: 0;
+                                margin: 10%;
+                                z-index: 1010;
+                                width: 50px;
+                                height: 50px;
+                                border-bottom: 2px solid white;
+                                border-right: 2px solid white;
+                                background-color: transparent;
+                            }
+
+                            .right-top {
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                margin: 10%;
+                                z-index: 1010;
+                                width: 50px;
+                                height: 50px;
+                                border-top: 2px solid white;
+                                border-right: 2px solid white;
+                                background-color: transparent;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        #category-gallery {
+            .container-fluid {
+
+                /* Style the tab buttons */
+                .category-buttons {
+                    .tablink {
+                        margin: 20px 10px;
+                        font-size: 17px;
+                    }
+                }
+
+                .tabcontent {
+                    padding: 50px;
+                    .container-fluid {
+                        .rows {
+                            padding: 0 4px;
+                            .column {
+                                flex: 33.33%;
+                                padding: 0 4px;
+
+                                .pic {
+                                    margin-top: 8px;
+                                    img {
+                                        margin: 0;
+                                        padding: 0;
+                                    }
+
+                                    .overlay {
+                                        .left-top {
+                                            width: 50px;
+                                            height: 50px;
+                                        }
+
+                                        .left-bottom {
+                                            z-index: 1010;
+                                            width: 50px;
+                                            height: 50px;
+                                        }
+
+                                        .right-bottom {
+                                            z-index: 1010;
+                                            width: 50px;
+                                            height: 50px;
+                                        }
+
+                                        .right-top {
+                                            z-index: 1010;
+                                            width: 50px;
+                                            height: 50px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #notice{
+        #notice-list{
+            .category-buttons {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-evenly;
+            }
+            .tabcontent{
+                .container-fluid{
+                    .flip-notice {
+                        padding: 3% 0;
+                        .container-fluid {
+                            h2 {
+                                font-family: 'Kanit', sans-serif;
+                            }
+                            .row {
+                                .flip-card {
+                                    @include margin-new(20px, 10px, 0, 10px);
+                                }
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

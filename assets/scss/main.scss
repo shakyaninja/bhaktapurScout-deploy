@@ -1,0 +1,8 @@
+@import './layouts/_layouts.scss';
+@import './mixins/_mixins.scss';
+@import './responsive/_responsive.scss';
+@import './variables/_variables.scss';
+body{
+    background-color: $secondary;
+    // min-height: 200vh;
+}

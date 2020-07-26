@@ -1,0 +1,2950 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+@import '../variables/variables';
+@import '../mixins/mixins';
+
+body {
+
+
+    // scss for modals in index,notice and gallery pages starts
+    #myModal {
+        height: 100vh;
+
+        .modal-dialog {
+            max-height: 100%;
+            margin-top: 8%;
+            margin-left: 20%;
+
+            .modal-content {
+                border: none;
+                background-color: transparent;
+                height: 100%;
+
+                .modal-body {
+                    button {
+                        color: white;
+                        position: fixed;
+                        top: 20px;
+                        right: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    #gallery-full {
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+
+        .modal-dialog {
+            width: 100vw !important;
+            max-height: 100%;
+            margin: 0;
+
+            .modal-content {
+                border: none;
+                background-color: transparent;
+                width: 100vw !important;
+
+                .modal-body {
+                    button {
+                        color: white;
+                        padding: 5px;
+                        position: fixed;
+                        top: 20px;
+                        right: 50px;
+                        z-index: 1500;
+                        border-radius: 3px;
+                        transition: ease-in-out 0.3s;
+
+                        &:hover {
+                            background-color: $primarydark;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #notice-modal {
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+
+        .modal-dialog {
+            width: 100vw !important;
+            max-height: 100%;
+            padding: 0 0;
+
+            .modal-content {
+                border: none;
+                background-color: transparent;
+                width: 90vw !important;
+
+                .modal-body {
+                    button {
+                        color: white;
+                        padding: 5px;
+                        position: fixed;
+                        top: 30px;
+                        right: 50px;
+                        z-index: 1500;
+                        border-radius: 3px;
+                        transition: ease-in-out 0.3s;
+
+                        &:hover {
+                            background-color: $primarydark;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // scss for modals in index,notice and gallery pages ends
+
+
+    // scss for header or navbar starts and remain fixed for all pages
+
+    header {
+        nav {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+
+            .brand {
+                color: white;
+                transition: ease-in-out 0.3s;
+
+                &:hover {
+                    transition: ease-in-out 0.3s;
+                    color: $primary;
+                }
+            }
+
+            .menu {
+                color: white;
+                transition: ease-in-out 0.3s;
+
+                &:hover {
+                    transition: ease-in-out 0.3s;
+                    cursor: pointer;
+                    color: $primary;
+                }
+            }
+
+            .overlay {
+                height: 100%;
+                width: 0;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                scrollbar-width: 0;
+                background-color: rgba(0, 0, 0, 0.7);
+                overflow-x: hidden;
+                transition: ease-in-out 0.5s;
+                font-family: 'Kanit', sans-serif;
+
+                a {
+                    padding: 10px;
+                    text-decoration: none;
+                    font-size: 36px;
+                    color: $secondary;
+                    display: block;
+                    transition: ease-in-out 0.5s;
+
+                    .flex {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        span {
+                            transition: ease-in-out 0.5s;
+                            margin: 0 20px;
+                        }
+
+                        .line-dec {
+                            width: 10px;
+                            height: 3px;
+                            border-radius: 1.5px;
+                            background-color: $secondary;
+                            transition: ease-in-out 0.5s;
+                            display: none;
+
+                        }
+                    }
+
+                    &:focus,
+                    &:hover {
+                        transition: ease-in-out 0.5s;
+                        color: $primary;
+
+                        .flex {
+                            span {
+                                transition: ease-in-out 0.5s;
+                                margin: 0 10px;
+                            }
+
+                            .line-dec {
+                                transition: ease-in-out 0.5s;
+                                background-color: $primary;
+                                display: block;
+                            }
+                        }
+                    }
+
+                }
+
+                .overlay-content {
+                    position: relative;
+                    top: 25%;
+                    width: 100%;
+                    text-align: center;
+                    margin-top: 30px;
+                }
+
+                .closebtn {
+                    position: absolute;
+                    top: 20px;
+                    right: 45px;
+                    font-size: 60px;
+                }
+            }
+        }
+
+        .bg-before {
+            background-color: rgba(0, 0, 0, 0.3);
+            transition: all ease-in-out 0.7s;
+        }
+
+        .black {
+            transition: all ease-in-out 0.7s;
+            background-color: $secondarydark;
+            -webkit-box-shadow: 0px 4px 5px 0px rgba(20, 20, 20, 0.75);
+            -moz-box-shadow: 0px 4px 5px 0px rgba(20, 20, 20, 0.75);
+            box-shadow: 0px 4px 5px 0px rgba(20, 20, 20, 0.75);
+
+        }
+    }
+
+    // scss for header or navbar ends
+
+    // scss for index page starts
+    #index {
+
+        #hero {
+
+            .banner-img {
+                width: 100vw;
+                max-height: 100vh;
+                display: block;
+                background-size: cover;
+            }
+
+            // min-height: 100vh !important;
+            .hero-info {
+                height: 100vh;
+                width: 100%;
+                color: $lightfont;
+                padding: 20%;
+                position: absolute;
+                top: 0%;
+                left: 0%;
+                z-index: 5;
+                font-family: 'Kanit', sans-serif;
+                background-color: rgba(0, 0, 0, 0.3);
+
+                h1 {
+                    text-align: center;
+                }
+
+                span {
+                    text-align: center;
+                }
+
+                .play-btn {
+                    background-color: transparent;
+                    border: 1px solid white;
+                    margin: auto;
+                    display: flex;
+                    justify-content: center;
+                    transition: all ease-in-out 0.3s;
+
+                    i {
+                        margin: auto;
+                        color: white;
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+                        background-color: white;
+
+                        i {
+                            color: black;
+                        }
+                    }
+                }
+
+
+            }
+        }
+
+        #welcome {
+            padding-top: 5%;
+
+            .container-fluid {
+                .row {
+                    #aboutus-img {
+                        -webkit-box-shadow: 5px 5px 10px 0px rgba(119, 119, 119, 0.75);
+                        -moz-box-shadow: 5px 5px 10px 0px rgba(119, 119, 119, 0.75);
+                        box-shadow: 5px 5px 10px 0px rgba(119, 119, 119, 0.75);
+                        z-index: 5;
+                    }
+
+                    #welcome-txt {
+                        text-align: center;
+                        background-color: $secondary;
+                        z-index: 10;
+                        overflow: hidden;
+                        -webkit-box-shadow: 5px 5px 10px 0px rgba(119, 119, 119, 0.75);
+                        -moz-box-shadow: 5px 5px 10px 0px rgba(119, 119, 119, 0.75);
+                        box-shadow: 5px 5px 10px 0px rgba(119, 119, 119, 0.75);
+                        font-family: 'Kanit', sans-serif;
+                    }
+                }
+            }
+        }
+
+        #lateststory {
+            min-height: 100vh;
+            font-family: 'Kanit', sans-serif;
+
+            h2 {
+                font-style: bold;
+            }
+
+            .card {
+                background-color: $secondary !important;
+            }
+        }
+
+        #testimonial {
+            h2 {
+                font-family: 'Kanit', sans-serif;
+            }
+
+            .carousel {
+                .carousel-indicators {
+                    color: grey;
+                }
+
+                .carousel-control-prev,
+                .carousel-control-next {
+                    color: grey;
+                }
+
+                .carousel-inner {
+                    .avatar {
+                        font-family: 'Kanit', sans-serif;
+
+                        .image-avatar {
+                            -webkit-box-shadow: 5px 5px 10px 0px rgba(119, 119, 119, 0.75);
+                            -moz-box-shadow: 5px 5px 10px 0px rgba(119, 119, 119, 0.75);
+                            box-shadow: 5px 5px 10px 0px rgba(119, 119, 119, 0.75);
+                        }
+                    }
+                }
+            }
+
+            .testimonial-txt {
+                z-index: 20;
+                -webkit-box-shadow: 5px 5px 10px 0px rgba(119, 119, 119, 0.75);
+                -moz-box-shadow: 5px 5px 10px 0px rgba(119, 119, 119, 0.75);
+                box-shadow: 5px 5px 10px 0px rgba(119, 119, 119, 0.75);
+            }
+        }
+
+        // #joinus {
+        //     min-height: 40vh;
+        //     font-family: 'Kanit', sans-serif;
+        //     margin-bottom: -150px;
+        //     z-index: 20;
+
+        //     .container-fluid {
+        //         display: flexbox;
+        //         justify-content: center;
+
+        //         form {
+        //             padding-top: 80px;
+
+        //             .overlap {
+        //                 background-color: $secondary;
+        //                 margin: 0;
+        //                 padding: 50px;
+        //                 width: 90%;
+        //                 display: flex;
+        //                 flex-flow: row wrap;
+
+        //                 input {
+        //                     width: 95%;
+        //                     border: 1px $secondarydark solid;
+        //                     background-color: $secondarydark;
+        //                     padding: 5px;
+        //                 }
+
+        //                 button {
+        //                     border: none;
+        //                     padding: 10px;
+
+        //                     i {
+        //                         font-size: 28px;
+        //                     }
+        //                 }
+        //             }
+        //         }
+        //     }
+
+        // }
+
+        #social-links {
+            h2 {
+                font-family: 'Kanit', sans-serif;
+            }
+
+            .container {
+                ul {
+                    position: relative;
+                    width: 100%;
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: space-evenly;
+                    list-style: none;
+
+                    li {
+                        position: relative;
+                        transform: rotate(-30deg) skew(25deg);
+                        display: flex;
+                        justify-content: center;
+                        align-content: center;
+
+                        a {
+                            text-decoration: none;
+
+                            span {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                transition: linear 0.3s;
+                                display: flex !important;
+                                justify-content: center;
+                                align-items: center;
+                                color: white;
+
+                            }
+
+                            .facebook {
+                                background-color: $facebook;
+                            }
+
+                            .twitter {
+                                background-color: $twitter;
+                            }
+
+                            .youtube {
+                                background-color: $youtube;
+                            }
+
+                            .instagram {
+                                background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+                            }
+
+                            &:hover {
+                                text-decoration: none;
+
+                                span {
+                                    &:nth-child(5) {
+                                        transform: translate(40px, -40px);
+                                        opacity: 1;
+                                    }
+
+                                    &:nth-child(4) {
+                                        transform: translate(30px, -30px);
+                                        opacity: .8;
+                                    }
+
+                                    &:nth-child(3) {
+                                        transform: translate(20px, -20px);
+                                        opacity: .6;
+                                    }
+
+                                    &:nth-child(2) {
+                                        transform: translate(10px, -10px);
+                                        opacity: .4;
+                                    }
+
+                                    &:nth-child(1) {
+                                        opacity: .2;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // scss for index page ends
+
+    // scss for gallery page starts
+    #gallery {
+        min-height: 100vh;
+
+        #top-banner-gallery {
+            background: url("/views/assets/images/adventure-1807495_19201.jpg") no-repeat fixed;
+            background-size: center;
+
+            .container-fluid {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+        }
+
+        #gallery-images {
+            .rows {
+                display: flex;
+                flex-wrap: wrap;
+
+                .column {
+
+                    .pic {
+                        vertical-align: middle;
+                        position: relative;
+                        transition: all ease-in-out 0.5s;
+
+                        img {
+                            margin: 0;
+                            padding: 0;
+                        }
+
+                        .overlay {
+                            margin: 0;
+                            padding: 0;
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            left: 0;
+                            right: 0;
+                            z-index: 1000;
+                            width: 100%;
+                            height: 100%;
+                            background-color: transparent;
+                            opacity: 0;
+
+                            .left-top {
+                                position: absolute;
+                                margin: 10%;
+                                z-index: 1010;
+                                width: 50px;
+                                height: 50px;
+                                border-top: 2px solid white;
+                                border-left: 2px solid white;
+                                background-color: transparent;
+                            }
+
+                            .left-bottom {
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                margin: 10%;
+                                z-index: 1010;
+                                width: 50px;
+                                height: 50px;
+                                border-bottom: 2px solid white;
+                                border-left: 2px solid white;
+                                background-color: transparent;
+                            }
+
+                            .right-bottom {
+                                position: absolute;
+                                bottom: 0;
+                                right: 0;
+                                margin: 10%;
+                                z-index: 1010;
+                                width: 50px;
+                                height: 50px;
+                                border-bottom: 2px solid white;
+                                border-right: 2px solid white;
+                                background-color: transparent;
+                            }
+
+                            .right-top {
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                margin: 10%;
+                                z-index: 1010;
+                                width: 50px;
+                                height: 50px;
+                                border-top: 2px solid white;
+                                border-right: 2px solid white;
+                                background-color: transparent;
+                            }
+                        }
+
+                        &:hover {
+                            cursor: pointer;
+
+                            .overlay {
+                                transition: all ease-in-out 0.3s;
+
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        #category-gallery {
+
+            // min-height: 100vh;
+            .container-fluid {
+
+                /* Style the tab buttons */
+                .category-buttons {
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: space-evenly;
+
+                    .btn {
+                        position: relative;
+                        display: inline-block;
+                        width: 277px;
+                        height: 50px;
+                        font-weight: bold;
+                        line-height: 50px;
+                        text-align: center;
+                        text-transform: uppercase;
+                        background-color: transparent;
+                        cursor: pointer;
+                        text-decoration: none;
+                        font-family: 'Roboto', sans-serif;
+                        font-weight: 900;
+                        font-size: 17px;
+                        letter-spacing: 0.045em;
+                        margin: 10px 0;
+
+                        svg {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+
+                            rect {
+                                // stroke: $primary;
+
+                                stroke-width: 3;
+                                stroke-dasharray: 353, 0;
+                                stroke-dashoffset: 0;
+                                -webkit-transition: all 600ms ease;
+                                transition: all 600ms ease;
+                            }
+                        }
+
+                        span {
+                            background: $primary;
+                            background: -moz-linear-gradient(left, $primary, $primarydark);
+                            background: -webkit-linear-gradient(left, $primary, $primarydark);
+                            background: linear-gradient(to right, $primary, $primarydark);
+                            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$primary, endColorstr=$primarydark, GradientType=1);
+                            -webkit-background-clip: text;
+                            background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                        }
+
+                        &:hover {
+                            svg {
+                                rect {
+                                    stroke-width: 3;
+                                    stroke-dasharray: 196, 543;
+                                    stroke-dashoffset: 437;
+                                }
+                            }
+                        }
+
+                        &:focus {
+                            svg {
+                                rect {
+                                    stroke-width: 3;
+                                    stroke-dasharray: 196, 543;
+                                    stroke-dashoffset: 437;
+                                }
+                            }
+                        }
+                    }
+
+                    // .tablink {
+                    //     background-color: #555;
+                    //     color: white;
+                    //     float: left;
+                    //     border: none;
+                    //     outline: none;
+                    //     cursor: pointer;
+                    //     width: 22%;
+
+                    //     &:hover {
+                    //         background-color: #777;
+                    //     }
+
+                    //     /* Set default styles for tab content */
+
+
+                    //     /* Style each tab content individually */
+                    //     #cat-1 {
+                    //         background-color: $primary;
+                    //     }
+
+                    //     #cat-2 {
+                    //         background-color: $primarydark;
+                    //     }
+
+                    //     #cat-3 {
+                    //         background-color: turquoise;
+                    //     }
+
+                    //     #cat-4 {
+                    //         background-color: orange;
+                    //     }
+
+                    //     #cat-5 {
+                    //         background-color: dodgerblue;
+                    //     }
+
+                    //     #cat-6 {
+                    //         background-color: $primary;
+                    //     }
+
+                    //     #cat-7 {
+                    //         background-color: $primarydark;
+                    //     }
+
+                    //     #cat-8 {
+                    //         background-color: turquoise;
+                    //     }
+                    // }
+                }
+
+                .tabcontent {
+                    color: white;
+                    display: none;
+                    padding: 50px;
+                    min-height: 100vh;
+                    text-align: center;
+
+                    .container-fluid {
+                        .rows {
+                            display: flex;
+                            flex-wrap: wrap;
+
+                            .column {
+
+                                .pic {
+                                    vertical-align: middle;
+                                    position: relative;
+                                    transition: all ease-in-out 0.5s;
+
+                                    img {
+                                        margin: 0;
+                                        padding: 0;
+                                    }
+
+                                    .overlay {
+                                        margin: 0;
+                                        padding: 0;
+                                        position: absolute;
+                                        top: 0;
+                                        bottom: 0;
+                                        left: 0;
+                                        right: 0;
+                                        z-index: 1000;
+                                        width: 100%;
+                                        height: 100%;
+                                        transition: all ease-in-out 0.5s;
+                                        background-color: rgba(0, 0, 0, 0.5);
+                                        opacity: 0;
+
+                                        .album-text {
+                                            font-family: 'Kanit', sans-serif;
+                                            font-size: 28px;
+                                            position: absolute;
+                                            top: 45%;
+                                            left: 40%;
+                                            color: white;
+                                        }
+
+                                        .left-top {
+                                            position: absolute;
+                                            margin: 10%;
+                                            z-index: 1010;
+                                            border-top: 2px solid white;
+                                            border-left: 2px solid white;
+                                            background-color: transparent;
+                                        }
+
+                                        .left-bottom {
+                                            position: absolute;
+                                            bottom: 0;
+                                            left: 0;
+                                            margin: 10%;
+                                            z-index: 1010;
+                                            border-bottom: 2px solid white;
+                                            border-left: 2px solid white;
+                                            background-color: transparent;
+                                        }
+
+                                        .right-bottom {
+                                            position: absolute;
+                                            bottom: 0;
+                                            right: 0;
+                                            margin: 10%;
+                                            z-index: 1010;
+                                            border-bottom: 2px solid white;
+                                            border-right: 2px solid white;
+                                            background-color: transparent;
+                                        }
+
+                                        .right-top {
+                                            position: absolute;
+                                            top: 0;
+                                            right: 0;
+                                            margin: 10%;
+                                            z-index: 1010;
+                                            border-top: 2px solid white;
+                                            border-right: 2px solid white;
+                                            background-color: transparent;
+                                        }
+                                    }
+
+                                    &:hover {
+                                        cursor: pointer;
+
+                                        .overlay {
+                                            transition: all ease-in-out 0.3s;
+
+                                            opacity: 1;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // scss for gallery page starts
+
+    // SCSS for notification page page starts
+    #notice {
+        #top-banner-notice {
+            min-height: 50vh;
+            background: url("/views/assets/images/adventure-1807495_19201.jpg") no-repeat fixed;
+            background-size: center;
+
+            .container-fluid {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 50vh;
+                background-color: rgba(0, 0, 0, 0.5);
+
+                h1 {
+                    font-family: 'Kanit', sans-serif;
+                    font-weight: 500;
+                    color: $secondary;
+                }
+            }
+        }
+
+
+        #notice-list {
+            .category-buttons {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-evenly;
+
+                .btn {
+                    position: relative;
+                    display: inline-block;
+                    width: 277px;
+                    height: 50px;
+                    font-size: 1em;
+                    font-weight: bold;
+                    line-height: 50px;
+                    text-align: center;
+                    text-transform: uppercase;
+                    background-color: transparent;
+                    cursor: pointer;
+                    text-decoration: none;
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 900;
+                    font-size: 17px;
+                    letter-spacing: 0.045em;
+                    margin: 10px 0;
+
+                    svg {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+
+                        rect {
+                            // stroke: $primary;
+
+                            stroke-width: 3;
+                            stroke-dasharray: 353, 0;
+                            stroke-dashoffset: 0;
+                            -webkit-transition: all 600ms ease;
+                            transition: all 600ms ease;
+                        }
+                    }
+
+                    span {
+                        background: $primary;
+                        background: -moz-linear-gradient(left, $primary, $primarydark);
+                        background: -webkit-linear-gradient(left, $primary, $primarydark);
+                        background: linear-gradient(to right, $primary, $primarydark);
+                        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$primary, endColorstr=$primarydark, GradientType=1);
+                        -webkit-background-clip: text;
+                        background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+
+                    &:hover {
+                        svg {
+                            rect {
+                                stroke-width: 3;
+                                stroke-dasharray: 196, 543;
+                                stroke-dashoffset: 437;
+                            }
+                        }
+                    }
+
+                    &:focus {
+                        svg {
+                            rect {
+                                stroke-width: 3;
+                                stroke-dasharray: 196, 543;
+                                stroke-dashoffset: 437;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .tabcontent {
+                .container-fluid {
+                    .flip-notice {
+                        padding: 3% 0;
+
+                        .container-fluid {
+                            h2 {
+                                font-family: 'Kanit', sans-serif;
+                            }
+
+                            .row {
+                                .flip-card {
+                                    background-color: transparent;
+                                    width: 300px;
+                                    height: 300px;
+                                    perspective: 1000px;
+
+                                    .flip-card-inner {
+                                        position: relative;
+                                        width: 100%;
+                                        height: 100%;
+                                        text-align: center;
+                                        transition: transform 0.8s;
+                                        transform-style: preserve-3d;
+
+                                        .flip-card-front,
+                                        .flip-card-back {
+                                            position: absolute;
+                                            width: 100%;
+                                            height: 100%;
+                                            -webkit-backface-visibility: hidden;
+                                            backface-visibility: hidden;
+                                        }
+
+                                        .rover {
+                                            background-color: $rover;
+                                            color: white;
+                                        }
+
+                                        .scout {
+                                            background-color: $scout;
+                                            color: white;
+                                        }
+
+                                        .master {
+                                            background-color: $master;
+                                            color: white;
+                                        }
+
+                                        .cub {
+                                            background-color: $cub;
+                                            color: white;
+
+                                        }
+
+                                        .all {
+                                            background-color: $all;
+                                            color: black;
+                                        }
+
+                                        .flip-card-front {
+                                            padding: 20%;
+                                            text-align: center;
+                                            vertical-align: middle;
+                                            // background-color: $primarydark;
+                                            font-family: 'kanit', sans-serif;
+
+                                            h1 {
+                                                font-size: 28px;
+                                            }
+
+                                            p {
+                                                font-size: 12px;
+                                            }
+                                        }
+
+
+                                        .flip-card-back {
+                                            background-color: dodgerblue;
+                                            color: white;
+                                            transform: rotateY(180deg);
+                                        }
+                                    }
+
+                                    &:hover {
+                                        .flip-card-inner {
+                                            transform: rotateY(180deg);
+                                        }
+                                    }
+                                }
+
+                            }
+
+                            .pages {
+                                display: flex;
+                                justify-content: center;
+
+                                a {
+                                    .page {
+                                        margin: 5px;
+                                        box-sizing: border-box;
+                                        width: 50px;
+                                        height: 50px;
+                                        border: 3px solid $primarydark;
+                                        border-radius: 50%;
+                                        background-color: white;
+
+                                        .inner-box {
+                                            background-color: white;
+                                            width: 80%;
+                                            height: 80%;
+                                            border-radius: 50%;
+                                            margin: 10%;
+                                            text-align: center;
+                                            color: $primarydark;
+                                            line-height: 36px;
+                                            box-sizing: border-box;
+                                        }
+                                    }
+
+                                    .active {
+                                        margin: 5px;
+                                        box-sizing: border-box;
+                                        width: 50px;
+                                        height: 50px;
+                                        border: 3px solid $primarydark;
+                                        border-radius: 50%;
+                                        background-color: white;
+
+                                        .inner-box {
+                                            background-color: $primarydark;
+                                            width: 80%;
+                                            height: 80%;
+                                            border-radius: 50%;
+                                            margin: 10%;
+                                            text-align: center;
+                                            color: white;
+                                            line-height: 36px;
+                                            box-sizing: border-box;
+                                        }
+                                    }
+
+                                    &:hover {
+                                        text-decoration: none;
+
+                                        .page {
+                                            margin: 5px;
+                                            box-sizing: border-box;
+                                            width: 50px;
+                                            height: 50px;
+                                            border: 3px solid $primarydark;
+                                            border-radius: 50%;
+                                            background-color: white;
+
+                                            .inner-box {
+                                                transition: ease-in-out 0.3s;
+                                                background-color: $primary;
+                                                width: 80%;
+                                                height: 80%;
+                                                border-radius: 50%;
+                                                margin: 10%;
+                                                text-align: center;
+                                                color: white;
+                                                line-height: 36px;
+                                                box-sizing: border-box;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    // SCSS for notification page page ends
+
+
+    // SCSS for organization page page starts
+    #org {
+        #top-banner-org {
+            min-height: 50vh;
+            background: url("/views/assets/images/adventure-1807495_19201.jpg") no-repeat fixed;
+            background-size: center;
+
+            .container-fluid {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 50vh;
+                background-color: rgba(0, 0, 0, 0.5);
+
+                h1 {
+                    font-family: 'Kanit', sans-serif;
+                    font-weight: 500;
+                    color: $secondary;
+                }
+            }
+        }
+
+        #organizations {
+            .container {
+                // margin: 40px;
+                position: relative;
+                background-color: transparent;
+
+                h2 {
+                    font-family: 'Kanit', sans-serif;
+                    font-weight: 500;
+                }
+
+                .row {
+                    margin-top: 5%;
+
+                    .fond {
+                        position: relative;
+                        display: flex;
+                        justify-content: center;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+
+                        .carreaux_presentation_light {
+                            display: table-cell;
+                            width: 600px;
+                            background-size: cover;
+                            overflow: hidden;
+                            position: relative;
+
+                            .shadow_show_mini {
+                                position: absolute;
+                                z-index: 1000;
+                                top: 0;
+                                left: 0;
+                                right: 0;
+                                bottom: 0;
+                            }
+
+                            &:hover .shadow_show_mini {
+                                background-color: rgba(16, 23, 41, 0);
+                            }
+
+                            .hover_title {
+                                position: absolute;
+                                text-transform: uppercase;
+                                font-family: 'Kanit', sans-serif;
+                                padding: 2% 5%;
+                                z-index: 1000;
+                                top: 45%;
+                                left: -80%;
+                                color: #ffffff;
+                                font-weight: 300;
+                                font-size: 16px;
+                                width: 80%;
+                                border-radius: 0 50px 0 0;
+                                -webkit-transition: all 0.7s;
+                                -moz-transition: all 0.7s;
+                                -ms-transition: all 0.7s;
+                                transition: all 0.7s;
+                            }
+
+                            &:hover .hover_title {
+                                background-color: rgba(0, 0, 0, 0.75);
+                                left: 0px;
+                            }
+
+                            .hover_website {
+                                position: absolute;
+                                padding: 5px;
+                                z-index: 1000;
+                                top: 60%;
+                                right: -85%;
+                                margin-top: 25px;
+                                color: #fff;
+                                font-weight: 300;
+                                font-size: 11px;
+                                display: flex;
+                                border-radius: 0 0 0 50px;
+                                justify-content: space-around;
+                                flex-flow: row wrap;
+                                width: 70%;
+                                -webkit-transition: all 0.7s;
+                                -moz-transition: all 0.7s;
+                                -ms-transition: all 0.7s;
+                                transition: all 0.7s;
+
+                                a {
+                                    color: #fff;
+                                    text-decoration: none;
+
+                                    .social {
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        width: 20px;
+                                        height: 20px;
+                                    }
+
+                                    .facebook {
+                                        background-color: $facebook;
+                                    }
+
+                                    .twitter {
+                                        background-color: $twitter;
+                                    }
+
+                                    .youtube {
+                                        background-color: $youtube;
+                                    }
+
+                                    .instagram {
+                                        background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+                                    }
+                                }
+                            }
+
+                            &:hover .hover_website {
+                                background-color: rgba(0, 0, 0, 0.75);
+                                right: 0px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // SCSS for organization page page ends
+
+    // SCSS for blog page page starts
+    #blog {
+        #top-banner-blog {
+            min-height: 50vh;
+            background: url("/views/assets/images/adventure-1807495_19201.jpg") no-repeat fixed;
+            background-size: center;
+
+            .container-fluid {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 50vh;
+                background-color: rgba(0, 0, 0, 0.5);
+
+                h1 {
+                    font-family: 'Kanit', sans-serif;
+                    font-weight: 500;
+                    color: $secondary;
+                }
+            }
+        }
+
+        #blog-section {
+
+            // margin-top: 50px;
+            .row {
+                margin: 0px;
+
+                .single-blog {
+                    padding: 5% 2% 0% 2%;
+
+                    .blog-content {
+                        position: relative;
+
+                        .blog-image {
+                            width: 100%;
+                            height: 100%;
+                            display: block;
+                        }
+
+                        .overlay {
+                            background-color: rgba(0, 0, 0, 0.4);
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            transition: .5s ease;
+                            opacity: 0;
+                        }
+
+                        &:hover {
+                            .overlay {
+                                width: 80%;
+                                height: 80%;
+                                top: 10%;
+                                left: 10%;
+                                opacity: 1;
+                            }
+                        }
+
+                        .content {
+                            color: white;
+                            font-size: 20px;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            -webkit-transform: translate(-50%, -50%);
+                            -ms-transform: translate(-50%, -50%);
+                            transform: translate(-50%, -50%);
+                            text-align: center;
+                        }
+                    }
+
+                    a {
+                        h5 {
+                            margin-top: 10px;
+                            color: $primary !important;
+                            font-family: 'Oleo Script', cursive;
+                        }
+
+                        &:hover {
+                            text-decoration: none;
+                        }
+
+                    }
+
+                    .date {
+                        color: $accent;
+                        font-size: small;
+                    }
+                }
+            }
+        }
+
+        #pagination {
+            margin: 10px 0px;
+
+            .pages {
+                display: flex;
+                justify-content: center;
+
+                a {
+                    .page {
+                        margin: 5px;
+                        box-sizing: border-box;
+                        width: 50px;
+                        height: 50px;
+                        border: 3px solid $primarydark;
+                        border-radius: 50%;
+                        background-color: white;
+
+                        .inner-box {
+                            background-color: white;
+                            width: 80%;
+                            height: 80%;
+                            border-radius: 50%;
+                            margin: 10%;
+                            text-align: center;
+                            color: $primarydark;
+                            line-height: 36px;
+                            box-sizing: border-box;
+                        }
+                    }
+
+                    .active {
+                        margin: 5px;
+                        box-sizing: border-box;
+                        width: 50px;
+                        height: 50px;
+                        border: 3px solid $primarydark;
+                        border-radius: 50%;
+                        background-color: white;
+
+                        .inner-box {
+                            background-color: $primarydark;
+                            width: 80%;
+                            height: 80%;
+                            border-radius: 50%;
+                            margin: 10%;
+                            text-align: center;
+                            color: white;
+                            line-height: 36px;
+                            box-sizing: border-box;
+                        }
+                    }
+
+                    &:hover {
+                        text-decoration: none;
+
+                        .page {
+                            margin: 5px;
+                            box-sizing: border-box;
+                            width: 50px;
+                            height: 50px;
+                            border: 3px solid $primarydark;
+                            border-radius: 50%;
+                            background-color: white;
+
+                            .inner-box {
+                                transition: ease-in-out 0.3s;
+                                background-color: $primary;
+                                width: 80%;
+                                height: 80%;
+                                border-radius: 50%;
+                                margin: 10%;
+                                text-align: center;
+                                color: white;
+                                line-height: 36px;
+                                box-sizing: border-box;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // SCSS for blog page page ends
+
+    // SCSS for blog detail page page starts
+    #blog-detail {
+        #top-banner-blog-detail {
+            min-height: 50vh;
+            background: url("/views/assets/images/adventure-1807495_19201.jpg") no-repeat fixed;
+            background-size: center;
+
+            .container-fluid {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 50vh;
+                background-color: rgba(0, 0, 0, 0.5);
+
+                h1 {
+                    font-family: 'Kanit', sans-serif;
+                    font-weight: 500;
+                    color: $secondary;
+                }
+            }
+        }
+
+        #blog-page {
+            margin-top: 50px;
+            margin-bottom: 50px;
+
+            .col-lg-9 {
+                .blog-title {
+                    font-size: xx-large;
+                    color: $primary;
+                    font-family: 'Oleo Script', cursive;
+                }
+
+                .blog-date {
+                    color: $lightfont;
+                    font-size: small;
+                    margin-bottom: 30px;
+                }
+
+                .blog-textarea {
+                    text-align: justify;
+                    text-indent: 2em;
+                    font-size: large;
+                    margin: 10px 0px;
+                }
+
+                .blog-quote {
+                    padding: 2%;
+                    margin: 10px 0px;
+                    background-color: $accent;
+                    font-size: larger;
+                    text-align: justify;
+
+                    .fa-quote-left {
+                        font-size: 72px;
+                        color: $primary;
+                    }
+                }
+
+                .blog-text {
+                    font-weight: bold;
+                    font-size: large;
+                    margin: 10px 0px;
+                }
+
+                .image-blog {
+                    width: 100%;
+                    border-radius: 1%;
+                    margin: 10px 0px;
+                }
+
+                .youtube {
+                    width: 100%;
+                    height: 400px;
+                    margin: 10px 0px;
+                }
+
+                .separator {
+                    height: 1px;
+                    margin: 10px 0px;
+                    background-image: linear-gradient(to right, transparent, rgb(48, 49, 51), transparent);
+                }
+
+                .comments {
+                    .count-comments {
+                        color: $primary;
+                        font-weight: bold;
+                    }
+
+                    .comment {
+                        .avatar {
+                            width: 50%;
+                            height: auto;
+                            margin: auto;
+                            display: flex;
+                            justify-content: center;
+                        }
+
+                        .name {
+                            font-weight: bolder;
+                            margin: 0px;
+                        }
+
+                        .date {
+                            color: $lightfont;
+                            font-size: small;
+                        }
+
+                        .reply-bottom {
+                            color: $lightfont;
+                            margin-left: 50px;
+
+                            &:hover {
+                                text-decoration: none;
+                            }
+                        }
+
+                        .commet-detail {
+                            color: #555;
+                        }
+
+                    }
+                }
+
+                .reply {
+                    margin: 50px 0px;
+
+                    .message {
+                        color: #555;
+                    }
+
+                    form {
+                        margin-top: 10px;
+
+                        input[type='text'] {
+                            border: none;
+                            border-bottom: 2px solid #555;
+                            height: 30px;
+                            font-size: large;
+                            width: 100%;
+                        }
+
+                        input[type='email'] {
+                            border: none;
+                            border-bottom: 2px solid #555;
+                            height: 30px;
+                            font-size: large;
+                            width: 100%;
+                        }
+
+                        #message {
+                            width: 100%;
+                            border: none;
+                            border-bottom: 2px solid #555;
+                            font-size: large;
+                            resize: none;
+                            overflow: hidden;
+                        }
+
+                        #submit {
+                            border: none;
+                            background-color: $primary;
+                            padding: 5px 20px;
+                            color: white;
+                            box-sizing: border-box;
+
+                            &:hover {
+                                background-color: white;
+                                color: $primary;
+                                border: 1px solid $primary;
+                                box-sizing: border-box;
+                                padding: 4px 19px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .col-lg-3 {
+                .recent-blog {
+                    .heading {
+                        color: $primarydark;
+                        font-weight: 900;
+                        text-decoration: underline;
+                        margin-bottom: 20px;
+                    }
+
+                    .blog-list {
+                        .blog-single {
+                            position: relative;
+                            margin-bottom: 20px;
+
+                            .col-md-4 {
+                                .logo {
+                                    width: 100%;
+                                    height: 100%;
+                                }
+
+                                .overlay {
+                                    background-color: rgba(0, 0, 0, 0.1);
+                                    position: absolute;
+                                    width: 100%;
+                                    height: 100%;
+                                    top: 0;
+                                    left: 0;
+                                    right: 0;
+                                    bottom: 0;
+                                    transition: .5s ease;
+                                    opacity: 0;
+
+                                    &:hover {
+                                        background-color: rgba(0, 0, 0, 0.01);
+                                        position: absolute;
+                                        width: 100%;
+                                        height: 100%;
+                                        top: 0;
+                                        left: 0;
+                                        right: 0;
+                                        bottom: 0;
+                                        transition: .5s ease;
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+
+                            .title {
+                                a {
+                                    color: $primary;
+
+                                    &:hover {
+                                        text-decoration: none;
+                                    }
+                                }
+                            }
+
+                            .date {
+                                color: $lightfont;
+                                font-size: small;
+                            }
+                        }
+                    }
+                }
+
+                .popular {
+                    .heading {
+                        color: $primarydark;
+                        font-weight: 900;
+                        text-decoration: underline;
+                        margin-bottom: 20px;
+                    }
+
+                    .blog-list {
+                        .blog-single {}
+                    }
+                }
+            }
+        }
+    }
+
+    // SCSS for blog detail page page ends
+
+    // scss for contact page starts
+    #contact {
+        #top-banner-contact {
+            min-height: 50vh;
+            background: url("/views/assets/images/adventure-1807495_19201.jpg") no-repeat fixed;
+            background-size: center;
+
+            .container-fluid {
+                height: 50vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgba(0, 0, 0, 0.5);
+
+                h1 {
+                    color: $secondary;
+                    font-family: 'Kanit', sans-serif;
+                }
+            }
+        }
+
+        #main-contact {
+            .container {
+                position: relative;
+                margin-top: 5%;
+                margin-bottom: 5%;
+
+                .card {
+                    border: none;
+                    -webkit-box-shadow: 15px 20px 33px -22px rgba(0, 0, 0, 0.75);
+                    -moz-box-shadow: 15px 20px 33px -22px rgba(0, 0, 0, 0.75);
+                    box-shadow: 15px 20px 33px -22px rgba(0, 0, 0, 0.75);
+                }
+            }
+        }
+    }
+
+    // scss for contact page ends
+
+    // scss for quick-links page starts
+    #quick-links {
+        #top-banner-quick-links {
+            min-height: 50vh;
+            background: url("/views/assets/images/adventure-1807495_19201.jpg") no-repeat fixed;
+            background-size: center;
+
+            .container-fluid {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 50vh;
+                background-color: rgba(0, 0, 0, 0.5);
+
+                h1 {
+                    font-family: "Kanit", sans-serif;
+                    font-weight: 500;
+                    color: $secondary;
+                }
+            }
+        }
+
+        #links {
+            margin-top: 5%;
+            margin-bottom: 5%;
+
+            .container {
+                // margin: 40px;
+                position: relative;
+                background-color: transparent;
+
+                .row {
+                    margin-top: 5%;
+
+                    .fond {
+                        position: relative;
+                        display: flex;
+                        justify-content: center;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+
+                        .carreaux_presentation_light {
+                            display: table-cell;
+                            width: 200px;
+                            height: 200px;
+                            background-size: cover;
+                            overflow: hidden;
+                            position: relative;
+
+                            .shadow_show_mini {
+                                // background-color: rgba(57, 79, 85, 0.4);
+                                position: absolute;
+                                z-index: 1000;
+                                top: 0;
+                                left: 0;
+                                right: 0;
+                                bottom: 0;
+                            }
+
+                            &:hover .shadow_show_mini {
+                                background-color: rgba(16, 23, 41, 0);
+                            }
+
+                            .hover_title {
+                                position: absolute;
+                                text-transform: uppercase;
+                                // font-family: 'Roboto';
+                                padding: 7px;
+                                z-index: 1000;
+                                top: 60%;
+                                left: -80%;
+                                color: #ffffff;
+                                font-weight: 300;
+                                font-size: 13px;
+                                width: 80%;
+                                -webkit-transition: all 0.7s;
+                                -moz-transition: all 0.7s;
+                                -ms-transition: all 0.7s;
+                                transition: all 0.7s;
+                            }
+
+                            &:hover .hover_title {
+                                background-color: #1e4944;
+                                left: 0px;
+                            }
+
+                            .hover_website {
+                                position: absolute;
+                                padding: 5px;
+                                z-index: 1000;
+                                top: 60%;
+                                right: -85%;
+                                margin-top: 25px;
+                                color: #fff;
+                                font-weight: 300;
+                                font-size: 11px;
+                                width: 80%;
+                                -webkit-transition: all 0.7s;
+                                -moz-transition: all 0.7s;
+                                -ms-transition: all 0.7s;
+                                transition: all 0.7s;
+
+                                a {
+                                    color: #fff;
+                                }
+                            }
+
+                            &:hover .hover_website {
+                                background-color: #417c74;
+                                right: 0px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // scss for quick-links page ends
+
+    // SCSS for event page starts
+    #event {
+        #top-banner-event {
+            min-height: 75vh;
+            background: url("/views/assets/images/boys-1822557_1920.jpg") no-repeat fixed;
+            background-size: center;
+            color: $secondary;
+
+            .container-fluid {
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background-color: rgba(0, 0, 0, 0.5);
+
+
+                h1 {
+                    font-family: 'Kanit', sans-serif;
+                    font-weight: 500;
+                    color: $secondary;
+                }
+
+                p {
+                    width: 60%;
+                    text-align: center;
+                    font-size: large;
+                }
+
+                .span {
+                    font-size: x-large;
+                }
+
+                .time {
+                    display: flex;
+                    justify-content: center;
+                    font-size: small;
+                    z-index: 500;
+                    margin-bottom: 20px;
+
+                    .days {
+                        text-align: center;
+                        padding: 5px 15px;
+                        margin: 5px;
+                        background-color: #f08833;
+                        color: white;
+                        border-radius: 3px;
+                    }
+
+                    .hours {
+                        text-align: center;
+                        padding: 5px 15px;
+                        margin: 5px;
+                        background-color: #85cc56;
+                        color: white;
+                        border-radius: 3px;
+                    }
+
+                    .minutes {
+                        text-align: center;
+                        padding: 5px 15px;
+                        margin: 5px;
+                        background-color: #3471ca;
+                        color: white;
+                        border-radius: 3px;
+                    }
+
+                    .seconds {
+                        text-align: center;
+                        padding: 5px 15px;
+                        margin: 5px;
+                        background-color: #a12519;
+                        color: white;
+                        border-radius: 3px;
+                    }
+                }
+            }
+        }
+
+        .event-section,
+        .upcoming-event {
+            margin: 100px 0px;
+
+            .card {
+                width: 100%;
+                height: auto;
+                margin: 60px 0px;
+                position: relative;
+                transform-style: preserve-3d;
+                transform: perspective(2000px);
+                box-shadow: inset 550px 0 50px rgba(0, 0, 0, 0.5);
+                transition: 1s;
+
+                .imgbox {
+                    // border: 1px solid #000;
+                    box-sizing: border-box;
+                    transform-origin: left;
+                    transition: 1s;
+                    z-index: 10;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                        object-fit: cover;
+                    }
+                }
+
+                .details {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    padding: 20px;
+                    z-index: -1000;
+
+                    h4 {
+                        color: $primary;
+                    }
+
+                    p {
+                        margin: 0px;
+                        overflow: hidden;
+                        font-size: 12px;
+                    }
+
+                    .time {
+                        display: flex;
+                        justify-content: center;
+                        font-size: small;
+                        z-index: 50;
+
+                        .days {
+                            text-align: center;
+                            padding: 5px 15px;
+                            margin: 5px;
+                            background-color: #f08833;
+                            color: white;
+                            border-radius: 3px;
+                        }
+
+                        .hours {
+                            text-align: center;
+                            padding: 5px 15px;
+                            margin: 5px;
+                            background-color: #85cc56;
+                            color: white;
+                            border-radius: 3px;
+                        }
+
+                        .minutes {
+                            text-align: center;
+                            padding: 5px 15px;
+                            margin: 5px;
+                            background-color: #3471ca;
+                            color: white;
+                            border-radius: 3px;
+                        }
+
+                        .seconds {
+                            text-align: center;
+                            padding: 5px 15px;
+                            margin: 5px;
+                            background-color: #a12519;
+                            color: white;
+                            border-radius: 3px;
+                        }
+                    }
+                }
+
+                &:hover {
+                    z-index: 100;
+                    box-shadow: inset 20px 0 50px rgba(0, 0, 0, 0.5);
+                    transform: perspective(2000px) rotate(-10deg);
+
+                    .imgbox {
+                        z-index: 10;
+                        transform: rotateY(-125deg);
+                    }
+                }
+            }
+        }
+
+        #pagination {
+            margin: 10px 0px;
+
+            .pages {
+                display: flex;
+                justify-content: center;
+
+                a {
+                    .page {
+                        margin: 5px;
+                        box-sizing: border-box;
+                        width: 50px;
+                        height: 50px;
+                        border: 3px solid $primary;
+                        border-radius: 50%;
+                        background-color: white;
+
+                        .inner-box {
+                            background-color: white;
+                            width: 80%;
+                            height: 80%;
+                            border-radius: 50%;
+                            margin: 10%;
+                            text-align: center;
+                            color: $primary;
+                            line-height: 36px;
+                            box-sizing: border-box;
+                        }
+                    }
+
+                    .active {
+                        margin: 5px;
+                        box-sizing: border-box;
+                        width: 50px;
+                        height: 50px;
+                        border: 3px solid $primary;
+                        border-radius: 50%;
+                        background-color: white;
+
+                        .inner-box {
+                            background-color: $primary;
+                            width: 80%;
+                            height: 80%;
+                            border-radius: 50%;
+                            margin: 10%;
+                            text-align: center;
+                            color: white;
+                            line-height: 36px;
+                            box-sizing: border-box;
+                        }
+                    }
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+    }
+
+    // SCSS for event page ends
+
+    // SCSS for registration page starts
+    #registration {
+        #top-banner-registration {
+            min-height: 50vh;
+            background: url("/views/assets/images/adventure-1807495_19201.jpg") no-repeat fixed;
+            background-size: center;
+
+            .container-fluid {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 50vh;
+                background-color: rgba(0, 0, 0, 0.5);
+
+                h1 {
+                    font-family: "Kanit", sans-serif;
+                    font-weight: 500;
+                    color: $secondary;
+                }
+            }
+        }
+
+        #register {
+            margin: 5% 10%;
+            min-height: 90vh !important;
+
+            .container {
+                .nav-tabs {
+                    li {
+                        a {
+                            color: black;
+                            transition: ease-in-out 0.5s;
+
+                            &:hover {
+                                transition: ease-in-out 0.5s;
+                                color: $primary;
+                                font-size: 24px;
+                            }
+
+                            &::selection {
+                                transition: ease-in-out 0.5s;
+                                color: $primary;
+                                font-size: 24px;
+                            }
+                        }
+
+                        .active {
+                            color: $primary;
+                            font-size: 24px;
+                        }
+                    }
+                }
+
+                .tab-content {
+                    .tab-pane {
+                        .container {
+                            form {
+                                margin: 5%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // SCSS for registration page ends
+
+    #about {
+        min-height: 100vh;
+
+        #top-banner-about {
+            min-height: 40vh;
+            background: url("/views/assets/images/adventure-1807495_19201.jpg") no-repeat fixed;
+            background-size: center;
+
+            .container-fluid {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgba(0, 0, 0, 0.5);
+                color: $secondary;
+                margin: 0;
+                padding: 0;
+                min-height: 40vh;
+            }
+        }
+
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: 'Kanit', sans-serif;
+            font-weight: 300;
+        }
+
+        .container {
+            .row {
+                // background-color: white;
+                margin-top: 30px;
+                margin-bottom: 50px;
+
+                h1 {
+                    text-align: center !important;
+                    width: 100%;
+                }
+
+                .initiative-images {
+                    width: 100%;
+
+                    .initiative-image {
+                        width: 100%;
+                        height: auto;
+                        overflow: hidden;
+                        padding-left: 0;
+                        padding-right: 0;
+                    }
+
+                    .initiative-image img {
+                        width: 100%;
+                        height: auto;
+                        -webkit-transform: scale(1.0);
+                        transform: scale(1.0);
+                        -webkit-transition: .3s ease-in-out;
+                        transition: .3s ease-in-out;
+                    }
+
+                    .initiative-image img:hover {
+                        -webkit-transform: scale(1.3);
+                        transform: scale(1.3);
+                    }
+                }
+
+                .world-events {
+                    margin: 10px 0px;
+                    margin-bottom: 30px;
+
+                    .event-content {
+                        position: relative;
+
+                        .blog-image {
+                            width: 100%;
+                            height: 100%;
+                            display: block;
+                        }
+
+                        .overlay {
+                            background-color: rgba(0, 0, 0, 0.4);
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            transition: .5s ease;
+                            opacity: 0;
+                        }
+
+                        &:hover {
+                            .overlay {
+                                width: 90%;
+                                height: 90%;
+                                top: 5%;
+                                left: 5%;
+                                opacity: 1;
+                            }
+                        }
+
+                        .content {
+                            color: white;
+                            font-size: 20px;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            -webkit-transform: translate(-50%, -50%);
+                            -ms-transform: translate(-50%, -50%);
+                            transform: translate(-50%, -50%);
+                            text-align: center;
+
+                            p {
+                                font-size: 18px;
+                            }
+                        }
+                    }
+
+                    h5 {
+                        margin-top: 10px;
+                        color: $primary !important;
+                    }
+
+                    .date {
+                        color: $accent;
+                    }
+                }
+
+                .container {
+                    // height:100%;
+                    position: relative;
+                    // top: 50%;
+                    // left: 50%;
+                    // transform: translate(-50%, -50%);
+                    text-align: center;
+
+                    .btn {
+                        position: relative;
+                        display: inline-block;
+                        width: 277px;
+                        height: 50px;
+                        font-size: 1em;
+                        font-weight: bold;
+                        line-height: 50px;
+                        text-align: center;
+                        text-transform: uppercase;
+                        background-color: transparent;
+                        cursor: pointer;
+                        text-decoration: none;
+                        font-family: 'Roboto', sans-serif;
+                        font-weight: 900;
+                        font-size: 17px;
+                        letter-spacing: 0.045em;
+
+                        svg {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+
+                            rect {
+                                // stroke: $primary;
+
+                                stroke-width: 3;
+                                stroke-dasharray: 353, 0;
+                                stroke-dashoffset: 0;
+                                -webkit-transition: all 600ms ease;
+                                transition: all 600ms ease;
+                            }
+                        }
+
+                        span {
+                            background: $primary;
+                            background: -moz-linear-gradient(left, $primary, $primarydark);
+                            background: -webkit-linear-gradient(left, $primary, $primarydark);
+                            background: linear-gradient(to right, $primary, $primarydark);
+                            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$primary, endColorstr=$primarydark, GradientType=1);
+                            -webkit-background-clip: text;
+                            background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                        }
+
+                        &:hover {
+                            svg {
+                                rect {
+                                    stroke-width: 3;
+                                    stroke-dasharray: 196, 543;
+                                    stroke-dashoffset: 437;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //scss for resources starts
+
+    #resources {
+        min-height: 100vh;
+
+        #top-banner-resources {
+            background: url("/views/assets/images/adventure-1807495_19201.jpg") no-repeat fixed;
+            background-size: center;
+            min-height: 40vh;
+
+            .container-fluid {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgba(0, 0, 0, 0.5);
+                min-height: 40vh;
+                margin: 0;
+                font-family: 'Kanit', sans-serif;
+                color: $secondary;
+                padding: 0;
+            }
+        }
+
+        #resource {
+            .container-fluid {
+                .row {
+                    margin-left: 0 !important;
+                    margin-right: 0 !important;
+
+                    .column1 {
+                        margin: 0;
+                        padding: 0;
+
+                        .container-fluid {
+                            padding: 5%;
+                            text-align: center;
+                            margin-top: 20px;
+
+                            p {
+                                font-family: 'Kanit', sans-serif;
+                                font-weight: 500;
+                                font-size: 40px;
+                                color: $primary;
+                            }
+
+                            .row {
+                                margin-bottom: 100px;
+
+                                .res {
+                                    position: relative;
+                                    margin-bottom: 20px;
+
+                                    img {
+                                        width: 100%;
+                                    }
+
+                                    .overlay {
+                                        background-color: rgba(0, 0, 0, 0.4);
+                                        position: absolute;
+                                        width: 100%;
+                                        height: 100%;
+                                        top: 0;
+                                        left: 0;
+                                        right: 0;
+                                        bottom: 0;
+                                        transition: .5s ease;
+                                        opacity: 0;
+                                    }
+
+                                    &:hover {
+                                        .overlay {
+                                            width: 80%;
+                                            height: 80%;
+                                            top: 10%;
+                                            left: 10%;
+                                            opacity: 1;
+                                        }
+                                    }
+
+                                    .content {
+                                        color: white;
+                                        font-size: 20px;
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 50%;
+                                        -webkit-transform: translate(-50%, -50%);
+                                        -ms-transform: translate(-50%, -50%);
+                                        transform: translate(-50%, -50%);
+                                        text-align: center;
+                                    }
+                                }
+
+                                .container {
+                                    // height:100%;
+                                    position: relative;
+
+                                    // top: 50%;
+                                    // left: 50%;
+                                    // transform: translate(-50%, -50%);
+                                    .btn {
+                                        position: relative;
+                                        display: inline-block;
+                                        width: 277px;
+                                        height: 50px;
+                                        font-size: 1em;
+                                        font-weight: bold;
+                                        line-height: 50px;
+                                        text-align: center;
+                                        text-transform: uppercase;
+                                        background-color: transparent;
+                                        cursor: pointer;
+                                        text-decoration: none;
+                                        font-family: 'Roboto', sans-serif;
+                                        font-weight: 900;
+                                        font-size: 17px;
+                                        letter-spacing: 0.045em;
+
+                                        svg {
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;
+
+                                            rect {
+                                                // stroke: $primary;
+
+                                                stroke-width: 3;
+                                                stroke-dasharray: 353, 0;
+                                                stroke-dashoffset: 0;
+                                                -webkit-transition: all 600ms ease;
+                                                transition: all 600ms ease;
+                                            }
+                                        }
+
+                                        span {
+                                            background: $primary;
+                                            background: -moz-linear-gradient(left, $primary, $primarydark);
+                                            background: -webkit-linear-gradient(left, $primary, $primarydark);
+                                            background: linear-gradient(to right, $primary, $primarydark);
+                                            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$primary, endColorstr=$primarydark, GradientType=1);
+                                            -webkit-background-clip: text;
+                                            background-clip: text;
+                                            -webkit-text-fill-color: transparent;
+                                        }
+
+                                        &:hover {
+                                            svg {
+                                                rect {
+                                                    stroke-width: 3;
+                                                    stroke-dasharray: 196, 543;
+                                                    stroke-dashoffset: 437;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                            }
+
+                        }
+                    }
+
+                    .column2 {
+                        margin: 0;
+                        padding: 0;
+
+                        .container-fluid {
+                            border-left: 3px solid $primary;
+                            text-align: left;
+                            margin-top: 100px;
+                            margin-left: 0;
+                            padding-left: 40px;
+                            padding-right: 0;
+
+                            p {
+                                a {
+                                    font-family: 'Kanit', sans-serif;
+                                    font-weight: 400;
+                                    font-size: 30px;
+                                    color: $primary;
+                                    text-decoration: none;
+
+                                }
+                            }
+
+                            .row {
+                                margin-left: 0;
+                                margin-bottom: 10px;
+
+                                .col-md-4 {
+                                    padding: 0px;
+
+                                    img {
+                                        width: 100%;
+                                    }
+
+                                    .overlay {
+                                        position: absolute;
+                                        width: 100%;
+                                        height: 100%;
+                                        top: 0;
+                                        left: 0;
+                                        right: 0;
+                                        bottom: 0;
+                                        background-color: rgba(0, 0, 0, 0.3);
+                                        transition: ease .3s;
+                                        opacity: 0;
+
+                                        &:hover {
+                                            opacity: 1;
+                                        }
+                                    }
+                                }
+
+                                .col-md-8 {
+                                    a {
+
+                                        font-family: 'Kanit', sans-serif;
+                                        font-weight: 200;
+                                        font-size: 20px;
+                                        color: $primary;
+                                        text-decoration: none;
+                                    }
+
+                                    padding-top: 2%;
+                                }
+                            }
+
+                        }
+
+                        .container {
+                            // padding-left: 60px;
+                            border-left: 3px solid $primary;
+                            text-align: left;
+                            margin-top: 100px;
+                            margin-left: 0;
+                            padding-left: 40px;
+                            padding-right: 60px;
+
+                            .aside-widget {
+                                margin-top: 20px;
+                                margin-bottom: 40px;
+
+                                h2 {
+                                    color: $primary;
+                                }
+
+                                .category-widget {
+                                    ul {
+                                        padding: 0;
+
+                                        li {
+                                            display: block;
+                                            padding-bottom: 10px;
+                                            border-bottom: 1px solid #eceef2;
+
+                                            +li {
+                                                margin-top: 10px;
+                                            }
+
+                                            >a {
+                                                display: block;
+                                                -webkit-transition: 0.2s color;
+                                                transition: 0.2s color;
+                                                text-decoration: none;
+                                                font-size: 20px;
+                                                color: $primary;
+
+                                                >span {
+                                                    float: right;
+                                                    color: #fff;
+                                                    background-color: #212631;
+                                                    padding: 0px 5px;
+                                                    font-weight: 600;
+                                                    border-radius: 2px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .tags-widget {
+                                    ul {
+                                        padding: 0;
+
+                                        li {
+                                            display: inline-block;
+                                            margin-right: 3px;
+                                            margin-bottom: 5px;
+
+                                            a {
+                                                display: block;
+                                                color: #fff;
+                                                background-color: #212631;
+                                                padding: 3px 10px;
+                                                font-weight: 600;
+                                                border-radius: 2px;
+                                                -webkit-transition: 0.2s opacity;
+                                                transition: 0.2s opacity;
+
+                                                &:hover {
+                                                    background-color: $primary;
+                                                    color: #fff;
+                                                    text-decoration: none;
+                                                }
+
+                                                &:focus {
+                                                    background-color: $primary;
+                                                    color: #fff;
+                                                    text-decoration: none;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #res_detail {
+        // min-height: 100vh;
+
+        #top-banner-resources {
+            background: url("/views/assets/images/adventure-1807495_19201.jpg") no-repeat fixed;
+            background-size: center;
+            min-height: 40vh;
+
+            .container-fluid {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgba(0, 0, 0, 0.5);
+                min-height: 40vh;
+                margin: 0;
+                font-family: 'Kanit', sans-serif;
+                color: $secondary;
+                padding: 0;
+            }
+        }
+
+
+        .row {
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+
+            .column1 {
+                .container-fluid {
+                    p {
+                        font-family: 'Kanit', sans-serif;
+                        font-weight: 500;
+                        font-size: 40px;
+                        color: $primary;
+                    }
+
+                    padding-left: 40px;
+                    padding-right: 40px;
+
+                    embed {
+                        height: 80vh;
+                    }
+                }
+            }
+
+            .column2 {
+                margin: 0;
+                padding: 0;
+
+                .container-fluid {
+                    border-left: 3px solid $primary;
+                    text-align: left;
+                    margin-top: 100px;
+                    margin-left: 0;
+                    padding-left: 40px;
+
+                    p {
+                        a {
+                            font-family: 'Kanit', sans-serif;
+                            font-weight: 400;
+                            font-size: 30px;
+                            color: $primary;
+                            text-decoration: none;
+
+                        }
+                    }
+
+                    .row {
+                        margin-left: 0;
+                        margin-bottom: 10px;
+
+                        .col-md-4 {
+                            padding: 0px;
+
+                            img {
+                                width: 100%;
+                            }
+
+                            .overlay {
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                top: 0;
+                                left: 0;
+                                right: 0;
+                                bottom: 0;
+                                background-color: rgba(0, 0, 0, 0.3);
+                                transition: ease .3s;
+                                opacity: 0;
+
+                                &:hover {
+                                    opacity: 1;
+                                }
+                            }
+                        }
+
+                        .col-md-8 {
+                            a {
+
+                                font-family: 'Kanit', sans-serif;
+                                font-weight: 200;
+                                font-size: 20px;
+                                color: $primary;
+                                text-decoration: none;
+                            }
+
+                            padding-top: 2%;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+    //scss for resources ends here
+
+
+    // scss for footer section starts and remains fixed  for all pages
+    footer {
+        @include padding-new(10%, 2%, 10%, 0);
+        background-color: $primarydark;
+        color: white;
+        position: relative;
+        bottom: 0;
+
+        .container-fluid {
+            .row {
+                .container {
+                    margin-bottom: 20px;
+
+                    a {
+                        text-decoration: none;
+                        transition: all ease-in-out 0.5s;
+                        color: $secondary;
+
+                        &:hover {
+                            text-decoration: none;
+                            color: $secondarydark;
+                            transition: all ease-in-out 0.5s;
+
+                        }
+                    }
+
+                    .footer-menu {
+                        ul {
+                            list-style: none;
+                            padding: 0;
+
+                            a {
+                                text-decoration: none;
+                                color: white;
+                                margin: 5px;
+                            }
+                        }
+                    }
+
+                    .work-hours {
+                        a {
+                            text-decoration: none;
+                            color: white;
+                            margin: 5px;
+
+                        }
+
+                        table {
+                            tr {
+                                .day {
+                                    text-align: start;
+                                }
+
+                                .time {
+                                    text-align: end;
+                                }
+                            }
+                        }
+
+                        ul {
+                            list-style: none;
+                            padding: 0;
+
+
+                        }
+                    }
+
+                    .contact-info {
+                        ul {
+                            list-style: none;
+                            padding: 0;
+
+                            li {
+                                text-decoration: none;
+                                margin: 5px;
+                                color: white;
+
+                                i {
+                                    margin-right: 5px;
+                                }
+                            }
+                        }
+                    }
+
+                    .map {
+                        iframe {
+                            width: 400px !important;
+                            height: 450px !important;
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    #contact-footer {
+        padding: 5% 5% 0 5%;
+
+        // .footer-copyright {
+        //     height: 3vh;
+        //     text-align: start;
+        //     vertical-align: middle;
+
+        //     p {
+        //         margin: 0;
+        //         line-height: 3vh;
+        //     }
+        // }
+    }
+
+    // scss for footer section ends
+
+}

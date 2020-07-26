@@ -1,0 +1,1 @@
+// here we will write functions for getting data through AJAX
