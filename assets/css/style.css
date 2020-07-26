@@ -336,7 +336,7 @@ body #gallery {
   min-height: 100vh;
 }
 body #gallery #top-banner-gallery {
-  background: url("/views/assets/images/adventure-1807495_19201.jpg") no-repeat fixed;
+  background: url("../images/adventure-1807495_19201.jpg") no-repeat fixed;
   background-size: center;
 }
 body #gallery #top-banner-gallery .container-fluid {
@@ -573,7 +573,7 @@ body #gallery #category-gallery .container-fluid .tabcontent .container-fluid .r
 }
 body #notice #top-banner-notice {
   min-height: 50vh;
-  background: url("/views/assets/images/adventure-1807495_19201.jpg") no-repeat fixed;
+  background: url("../images/adventure-1807495_19201.jpg") no-repeat fixed;
   background-size: center;
 }
 body #notice #top-banner-notice .container-fluid {
@@ -782,7 +782,7 @@ body #notice #notice-list .tabcontent .container-fluid .flip-notice .container-f
 }
 body #org #top-banner-org {
   min-height: 50vh;
-  background: url("/views/assets/images/adventure-1807495_19201.jpg") no-repeat fixed;
+  background: url("../images/adventure-1807495_19201.jpg") no-repeat fixed;
   background-size: center;
 }
 body #org #top-banner-org .container-fluid {
@@ -906,7 +906,7 @@ body #org #organizations .container .row .fond .carreaux_presentation_light:hove
 }
 body #blog #top-banner-blog {
   min-height: 50vh;
-  background: url("/views/assets/images/adventure-1807495_19201.jpg") no-repeat fixed;
+  background: url("../images/adventure-1807495_19201.jpg") no-repeat fixed;
   background-size: center;
 }
 body #blog #top-banner-blog .container-fluid {
@@ -1050,7 +1050,7 @@ body #blog #pagination .pages a:hover .page .inner-box {
 }
 body #blog-detail #top-banner-blog-detail {
   min-height: 50vh;
-  background: url("/views/assets/images/adventure-1807495_19201.jpg") no-repeat fixed;
+  background: url("../images/adventure-1807495_19201.jpg") no-repeat fixed;
   background-size: center;
 }
 body #blog-detail #top-banner-blog-detail .container-fluid {
@@ -1246,7 +1246,7 @@ body #blog-detail #blog-page .col-lg-3 .popular .heading {
 }
 body #contact #top-banner-contact {
   min-height: 50vh;
-  background: url("/views/assets/images/adventure-1807495_19201.jpg") no-repeat fixed;
+  background: url("../images/adventure-1807495_19201.jpg") no-repeat fixed;
   background-size: center;
 }
 body #contact #top-banner-contact .container-fluid {
@@ -1273,7 +1273,7 @@ body #contact #main-contact .container .card {
 }
 body #quick-links #top-banner-quick-links {
   min-height: 50vh;
-  background: url("/views/assets/images/adventure-1807495_19201.jpg") no-repeat fixed;
+  background: url("../images/adventure-1807495_19201.jpg") no-repeat fixed;
   background-size: center;
 }
 body #quick-links #top-banner-quick-links .container-fluid {
@@ -1590,7 +1590,7 @@ body #event #pagination .pages a:hover {
 }
 body #registration #top-banner-registration {
   min-height: 50vh;
-  background: url("/views/assets/images/adventure-1807495_19201.jpg") no-repeat fixed;
+  background: url("../images/adventure-1807495_19201.jpg") no-repeat fixed;
   background-size: center;
 }
 body #registration #top-banner-registration .container-fluid {
@@ -1792,7 +1792,7 @@ body #resources {
   min-height: 100vh;
 }
 body #resources #top-banner-resources {
-  background: url("/views/assets/images/adventure-1807495_19201.jpg") no-repeat fixed;
+  background: url("../images/adventure-1807495_19201.jpg") no-repeat fixed;
   background-size: center;
   min-height: 40vh;
 }
@@ -2039,7 +2039,7 @@ body #resources #resource .container-fluid .row .column2 .container .aside-widge
   text-decoration: none;
 }
 body #res_detail #top-banner-resources {
-  background: url("/views/assets/images/adventure-1807495_19201.jpg") no-repeat fixed;
+  background: url("../images/adventure-1807495_19201.jpg") no-repeat fixed;
   background-size: center;
   min-height: 40vh;
 }
